@@ -14,8 +14,13 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string("link");
-            $table->longText('descrbtion');
             $table->string('title');
+            $table->string('title_ru');
+            $table->string('title_en');
+            $table->longText('description');
+            $table->longText('description_ru');
+            $table->longText('description_en');
+             
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id',)->references('id')->on('users');
             $table->timestamps();

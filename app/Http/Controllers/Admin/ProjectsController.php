@@ -22,7 +22,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.projects.create");
     }
 
     /**
@@ -30,7 +30,46 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'title_ru'=>'required',
+            'title_en'=>'required',
+            'description'=>'required',
+            'description_ru'=>'required',
+            'description_en'=>'required'
+        ]);
+        $projects = Projects::create($request->all());
+
+
+        //file upload
+        if ($request->file('photo', false)) {
+            $path = storage_path('tmp/uploads');
+            try {
+                if (!file_exists($path)) {
+                    mkdir($path, 0755, true);
+                }
+            } catch (\Exception $e) {
+            }
+
+            $file = $request->file('photo');
+
+            $name = uniqid() . '_' . trim($file->getClientOriginalName());
+
+            $file->move($path, $name);
+
+
+            if (!$projects->image || $request->file('photo') !== $projects->photo->file_name) {
+
+                if ($projects->photo) {
+                    $projects->photo->delete();
+                }
+                $projects->addMedia(storage_path('tmp/uploads/' . $name))->toMediaCollection('avatar');
+                
+            }
+        } elseif ($projects->photo) {
+            $projects->photo->delete();
+        }
+        return redirect('admin/projects');
     }
 
     /**
@@ -62,6 +101,8 @@ class ProjectsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $project = Projects::find($id);
+        $project->delete();
+        return back();
     }
 }

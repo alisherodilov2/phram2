@@ -8,7 +8,7 @@
                     Users
                 </a>
                 <div class="sb-sidenav-menu-heading">Sub tablelar</div>
-                <a class="nav-link" href="{{route('admin.protects.index')}}">
+                <a class="nav-link" href="{{route('admin.projects.index')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Projectlar
                 </a>

@@ -20,5 +20,5 @@ Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])
 Route::post("/login/auth", [App\Http\Controllers\Auth\AuthController::class, 'authLogin'])->name("login.auth");
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
     Route::resource("users", App\Http\Controllers\Admin\UserController::class);
-    Route::resource('protects' , App\Http\Controllers\Admin\ProjectsController::class);
+    Route::resource('projects' , App\Http\Controllers\Admin\ProjectsController::class);
 });
