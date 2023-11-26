@@ -19,4 +19,6 @@ class Projects extends Model implements HasMedia
         'description_ru',
         'description_en'
     ];
+  
 }
+

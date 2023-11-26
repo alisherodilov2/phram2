@@ -13,8 +13,8 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects =  Projects::all();
-        return view('admin.projects.index' , compact('projects'));
+        $projects = Projects::all();
+        return view('admin.projects.index', compact('projects'));
     }
 
     /**
@@ -31,44 +31,47 @@ class ProjectsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=>'required',
-            'title_ru'=>'required',
-            'title_en'=>'required',
-            'description'=>'required',
-            'description_ru'=>'required',
-            'description_en'=>'required'
+            'title' => 'required',
+            'title_ru' => 'required',
+            'title_en' => 'required',
+            'description' => 'required',
+            'description_ru' => 'required',
+            'description_en' => 'required'
         ]);
         $projects = Projects::create($request->all());
 
 
         //file upload
-        if ($request->file('photo', false)) {
-            $path = storage_path('tmp/uploads');
-            try {
-                if (!file_exists($path)) {
-                    mkdir($path, 0755, true);
-                }
-            } catch (\Exception $e) {
-            }
+        $projects->addMediaFromRequest('photo')->usingName($projects->id)->toMediaCollection();
 
-            $file = $request->file('photo');
+        // if ($request->file('photo', false)) {
+        //     $path = storage_path('tmp/uploads');
+        //     try {
+        //         if (!file_exists($path)) {
+        //             mkdir($path, 0755, true);
+        //         }
+        //     } catch (\Exception $e) {
+        //     }
 
-            $name = uniqid() . '_' . trim($file->getClientOriginalName());
+        //     $file = $request->file('photo');
 
-            $file->move($path, $name);
+        //     $name = uniqid() . '_' . trim($file->getClientOriginalName());
+
+        //     $file->move($path, $name);
 
 
-            if (!$projects->image || $request->file('photo') !== $projects->photo->file_name) {
+        //     if (!$projects->image || $request->file('photo') !== $projects->photo->file_name) {
 
-                if ($projects->photo) {
-                    $projects->photo->delete();
-                }
-                $projects->addMedia(storage_path('tmp/uploads/' . $name))->toMediaCollection('avatar');
-                
-            }
-        } elseif ($projects->photo) {
-            $projects->photo->delete();
-        }
+        //         if ($projects->photo) {
+        //             $projects->photo->delete();
+        //         }
+        //         $projects->addMedia(storage_path('tmp/uploads/' . $name))->toMediaCollection('avatar');
+
+        //     }
+        // } elseif ($projects->photo) {
+        //     $projects->photo->delete();
+        // }
+
         return redirect('admin/projects');
     }
 

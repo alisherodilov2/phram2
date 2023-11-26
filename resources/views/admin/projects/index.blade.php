@@ -29,7 +29,7 @@
                                         <td>{{ $project->link }}</td>
                                         <td>{{ $project->title }}</td>
                                         <td>
-                                            {{$project->getMedia()}}
+                                            <img src="{{$project->getFirstMediaUrl()}}" alt="" style="width: 250px">
                                         </td>
                                         <td>
                                             <div class="d-flex">
