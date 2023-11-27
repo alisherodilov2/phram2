@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <form action="{{ route('admin.projects.store') }}" method="POST"  enctype="multipart/form-data">
                 @csrf

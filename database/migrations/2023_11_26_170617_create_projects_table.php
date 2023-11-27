@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('title_en');
             $table->longText('description');
             $table->longText('description_ru');
-            $table->longText('description_en');
-             
+            $table->longText('description_en'); 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id',)->references('id')->on('users');
             $table->timestamps();

@@ -16,6 +16,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Partners
                 </a>
+                <a class="nav-link" href="{{route('admin.filillar.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Filillar
+                </a>
                 
             </div>
         </div>

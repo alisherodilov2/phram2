@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::resource("users", App\Http\Controllers\Admin\UserController::class);
     Route::resource('projects' , App\Http\Controllers\Admin\ProjectsController::class);
     Route::resource('partner' , App\Http\Controllers\Admin\PartnerContorller::class);
+    Route::resource("filillar"  ,  App\Http\Controllers\Admin\FiliallarController::class);
 });

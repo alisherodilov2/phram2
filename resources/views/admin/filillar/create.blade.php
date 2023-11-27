@@ -3,29 +3,39 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Partner Create</h2>
-                <form action="{{ route('admin.partner.store') }}" method="POST" enctype="multipart/form-data">
+                <h2>Filill Create</h2>
+                <form action="{{ route('admin.filillar.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card p-3">
                         <h2>Uz</h2>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="">Rasm</label>
-                                <input type="file" name="image" class="form-control" id="">
-                                @error('image')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
                                 <label for="exampleInputEmail1" class="form-label">Name</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
+                                <label for="">Viloyat</label>
+                                <select name="region_id" id="" class="form-control">
+                                    @foreach (App\Models\Regions::all() as $region)
+                                        <option value="{{ $region->id }}">{{ $region->name }}</option>
+                                    @endforeach
+
+                                </select>
+                                @error('region_id')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                                <label for="" class="mt-3">Telefon Raqam</label>
+                                <input type="text" class="form-control" placeholder="998 XX XXX XX XX" name="number">
+                                @error('number')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                                 @error('name')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Description</label>
-                                <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
-                                @error('description')
+                                <textarea name="subtext" class="form-control" id="" cols="30" rows="10"></textarea>
+                                @error('subtext')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -33,7 +43,7 @@
                     </div>
                     <div class="card p-3 mt-3">
                         <h2>Ru</h2>
-                        <div class="card-body ">
+                        <div class="card-body">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Name Ru</label>
                                 <input type="text" name="name_ru" class="form-control" id="exampleInputEmail1"
@@ -44,8 +54,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Description Ru</label>
-                                <textarea name="description_ru" class="form-control" id="" cols="30" rows="10"></textarea>
-                                @error('description_ru')
+                                <textarea name="subtext_ru" class="form-control" id="" cols="30" rows="10"></textarea>
+                                @error('subtext_ru')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -64,8 +74,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Description En</label>
-                                <textarea name="description_en" class="form-control" id="" cols="30" rows="10"></textarea>
-                                @error('description_en')
+                                <textarea name="subtext_en" class="form-control" id="" cols="30" rows="10"></textarea>
+                                @error('subtext_en')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
