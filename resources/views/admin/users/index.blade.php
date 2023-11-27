@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>Users</h1>
+                <h1>{{__('backend.welcome')}}</h1>    
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('admin.users.create') }}" class="btn btn-success">Create User</a>
