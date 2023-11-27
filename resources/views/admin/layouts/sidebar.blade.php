@@ -12,6 +12,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Projectlar
                 </a>
+                <a class="nav-link" href="{{route('admin.partner.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Partners
+                </a>
                 
             </div>
         </div>

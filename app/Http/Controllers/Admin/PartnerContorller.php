@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Projects;
+use App\Models\Partners;
 use Illuminate\Http\Request;
 
-class ProjectsController extends Controller
+class PartnerContorller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $projects = Projects::all();
-        return view('admin.projects.index', compact('projects'));
+        $partners = Partners::all();
+        return view("admin.partner.index"   , compact("partners"));
     }
 
     /**
@@ -22,7 +22,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view("admin.projects.create");
+        return view("admin.partner.create");
     }
 
     /**
@@ -31,20 +31,17 @@ class ProjectsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'title_ru' => 'required',
-            'title_en' => 'required',
-            'description' => 'required',
-            'description_ru' => 'required',
-            'description_en' => 'required',
-            'photo'=>'required'
+            'name'=>'required',
+            'description'=>'required',
+            'name_ru'=>'required',
+            'description_ru'=>'required',
+            'name_en'=>'required',
+            'description_en'=>'required',
+            'image'=>'required'
         ]);
-        $projects = Projects::create($request->all());
-
-
-        //file upload
-        $projects->addMediaFromRequest('photo')->usingName($projects->id)->toMediaCollection();
-        return redirect('admin/projects');
+        $partner =  Partners::create($request->all());
+        $partner->addMediaFromRequest('image')->usingName($partner->id)->toMediaCollection();
+        return redirect()->route('admin.partner.index');
     }
 
     /**
@@ -76,8 +73,9 @@ class ProjectsController extends Controller
      */
     public function destroy(string $id)
     {
-        $project = Projects::find($id);
-        $project->delete();
-        return back();
+        $partner = Partners::find($id);
+        $partner->delete();
+        return redirect()->route('admin.partner.index');
+
     }
 }
