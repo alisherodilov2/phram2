@@ -26,7 +26,7 @@
                                 @foreach ($projects as $project)
                                     <tr>
                                         <td>{{ $project->id }}</td>
-                                        <td>{{ $project->link }}</td>
+                                        <td><a href="{{ $project->link }}">{{ $project->link }}</a></td>
                                         <td>{{ $project->title }}</td>
                                         <td>
                                             <img src="{{$project->getFirstMediaUrl()}}" alt="" style="width: 250px">
