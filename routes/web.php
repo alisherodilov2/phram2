@@ -28,4 +28,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth' , '
     Route::resource('projects' , App\Http\Controllers\Admin\ProjectsController::class);
     Route::resource('partner' , App\Http\Controllers\Admin\PartnerContorller::class);
     Route::resource("filillar"  ,  App\Http\Controllers\Admin\FiliallarController::class);
+    Route::resource("vacancy" , App\Http\Controllers\Admin\VacancyController::class);
+    Route::resource("products" , App\Http\Controllers\Admin\ProductsController::class);
+    Route::resource("contact"  , App\Http\Controllers\Admin\ContactController::class);
 });

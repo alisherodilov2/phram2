@@ -20,12 +20,25 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Filillar
                 </a>
+                <a class="nav-link" href="{{route('admin.vacancy.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Vacancy
+                </a>
+                <a class="nav-link" href="{{route('admin.products.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Products
+                </a>
+
+                <a class="nav-link" href="{{route('admin.contact.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Contacts
+                </a>
                 
             </div>
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            {{auth()->user()->name}}
         </div>
     </nav>
 </div>

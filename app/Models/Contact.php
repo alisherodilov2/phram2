@@ -5,15 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Vacancy extends Model
+class Contact extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'title_ru',
-        'title_en',
+        'name',
         'description',
-        'description_ru',
-        'description_en'
+        'number',
+        'status'
+    ];
+    public const CONTACT_STATUS =  [
+        '0'=>'Yangi',
+        '1'=>'Javob berildi',
     ];
 }

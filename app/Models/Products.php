@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-class Projects extends Model implements HasMedia
+class Products  extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
@@ -20,4 +20,3 @@ class Projects extends Model implements HasMedia
         'description_en'
     ];
 }
-

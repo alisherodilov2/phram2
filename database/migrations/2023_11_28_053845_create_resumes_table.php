@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vacancies', function (Blueprint $table) {
+        Schema::create('resumes', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("title_ru");
-            $table->string("title_en");
+            $table->string('name');
             $table->longText("description");
-            $table->longText("description_ru");
-            $table->longText("description_en");
+            $table->string("number");
+            $table->string("email");
+            $table->unsignedBigInteger('vacancy_id')->nullable();
+            $table->foreign('vacancy_id',)->references('id')->on('vacancies');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vacancies');
+        Schema::dropIfExists('resumes');
     }
 };
