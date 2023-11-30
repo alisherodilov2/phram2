@@ -13,6 +13,7 @@ class Partners extends Model implements HasMedia
     public $fillable = [
         'name',
         'description',
+        'link',
         'name_ru',
         'description_ru',
         'name_en',

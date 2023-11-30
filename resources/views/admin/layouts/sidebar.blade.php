@@ -33,6 +33,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Contacts
                 </a>
+                <a class="nav-link" href="{{route('admin.blogs.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Blogs
+                </a>
                 
             </div>
         </div>

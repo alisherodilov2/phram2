@@ -5,7 +5,7 @@
              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="footer-widget footer-col-1 mb-50 wow fadeInUp" data-wow-delay=".2s">
                    <h4 class="footer-widget__title mb-30">
-                      <a href="index.html"><img src="assets/img/logo/white-logo.png" alt="logo"></a>
+                      <a href="index.html"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png" alt="logo"></a>
                    </h4>
                    <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo claritatem itamconse quat.Exerci tation ullamcorper.</p>
                    <div class="footer-widget__social">

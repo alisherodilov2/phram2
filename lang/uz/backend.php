@@ -12,5 +12,10 @@ return [
     'projects'=>"Proyektlar bo'limi",
     'infoabout'=>"Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya",
     'aboutcompany'=>"DORALINE farmatsevtika kompaniyasi 2014 yildan buyon O‘zbekistondagi yetakchi farmatsevtika kompaniyalaridan biri hisoblanadi. Tashkil etilganidan beri kompaniya yiliga 4-10 martaga o'sdi!",
-    'experice'=>'Yillik <br>Tajriba'
+    'experice'=>'Yillik <br>Tajriba',
+    'blog'=>"Doraline blogi",
+    'recentPost'=>'Oxirgi Postlar',
+    'send'=>'Xabar qoldirish',
+    'contact'=>'Kontakt',
+    'explore'=>"Koʻproq ma'lumot"
 ];

@@ -12,5 +12,10 @@ return [
     'projects'=>'Project Section',
     'infoabout'=>'Fully meets international standards. The company is engaged in the production of medicines and natural products made from medicinal plants growing in the mountains and valleys of Uzbekistan and Russia.',
     'aboutcompany'=>'DORALINE pharmaceutical company has been one of the leading pharmaceutical companies in Uzbekistan since 2014. Since its establishment, the company has grown 4-10 times a year!',
-    'experice'=>'Years of <br>Experience'
+    'experice'=>'Years of <br>Experience',
+    'blog'=>"Doraline Blog",
+    'recentPost'=>'Recent Posts',
+    'send'=>'Leave Message',
+    'contact'=>'Contact',
+    'explore'=>'Explore More'
 ];

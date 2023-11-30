@@ -154,10 +154,10 @@
                     <div class="col-xl-6 col-lg-12">
                         <div class="about__thumb mb-60 wow fadeInLeft" data-wow-delay=".4s">
                             <div class="about__img">
-                                <img src="{{asset('img/banner2.png')}}" alt="about-bg-img">
+                                <img src="{{ asset('img/banner2.png') }}" alt="about-bg-img">
                                 <div class="about__exprience">
                                     <h3>9</h3>
-                                    <i>{!!__('backend.experice')!!}</i>
+                                    <i>{!! __('backend.experice') !!}</i>
                                 </div>
                             </div>
                         </div>
@@ -165,14 +165,14 @@
                     <div class="col-xl-6 col-lg-12">
                         <div class="tp-about__content pt-125 ml-60 mb-50 wow fadeInRight" data-wow-delay=".4s">
                             <div class="tp-section">
-                                <span class="tp-section__sub-title left-line mb-25">{{__('backend.aboutus')}}</span>
+                                <span class="tp-section__sub-title left-line mb-25">{{ __('backend.aboutus') }}</span>
                                 <h3 class="tp-section__title tp-ab-sm-title mb-45">Doraline
                                 </h3>
                                 <i>
-                                   {{__('backend.infoabout')}}
+                                    {{ __('backend.infoabout') }}
                                 </i>
                                 <p class=" mr-20 mb-45">
-                                    {{__('backend.aboutcompany')}}
+                                    {{ __('backend.aboutcompany') }}
                                 </p>
                             </div>
                             <div class="tp-about__info-list mb-55">
@@ -253,8 +253,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="tp-section text-center">
-                            <span class="tp-section__sub-title left-line right-line mb-25">Work Gallery</span>
-                            <h3 class="tp-section__title mb-70">Bioxlab Gallery</h3>
+                            <h3 class="tp-section__title mb-70">{{ __('backend.blog') }}</h3>
                         </div>
                     </div>
                 </div>
@@ -263,91 +262,70 @@
                 <div class="tp-gallery ml-15 mr-15 wow fadeInUp" data-wow-delay=".4s">
                     <div class="swiper-container gall-active">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="tp-gallery__item p-relative mb-70">
-                                    <div class="tp-gallery__img p-relative">
-                                        <img src="assets/img/gallery/gal-thum-01.jpg" alt="gallery-img">
-                                        <div class="tp-gallery__info">
-                                            <a class="popup-image" href="assets/img/gallery/gal-thum-01.jpg"><i
-                                                    class="fa-solid fa-plus"></i></a>
+                            @foreach (App\Models\Blog::all() as $blog)
+                                @if (app()->getLocale() == 'uz')
+                                    <div class="swiper-slide">
+                                        <div class="tp-gallery__item p-relative mb-70">
+                                            <div class="tp-gallery__img p-relative">
+                                                <img src="{{ $blog->getFirstMediaUrl() }}" alt="gallery-img">
+                                                <div class="tp-gallery__info">
+                                                    <a class="popup-image" href="{{ $blog->getFirstMediaUrl() }}"><i
+                                                            class="fa-solid fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="tp-gallery__content">
+                                                <h4 class="tp-gallery__title"><a
+                                                        href="{{ route('blog.show', $blog->id) }}">
+                                                        {{ $blog->title }}
+                                                    </a>
+                                                </h4>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tp-gallery__content">
-                                        <h4 class="tp-gallery__title"><a href="portfolio-details.html">COVID ANALYSIS</a>
-                                        </h4>
-                                        <span><i class="fa-solid fa-tag"></i><a
-                                                href="services-details.html">Radiologist</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tp-gallery__item p-relative mb-70">
-                                    <div class="tp-gallery__img p-relative">
-                                        <img src="assets/img/gallery/gal-thum-02.jpg" alt="gallery-img">
-                                        <div class="tp-gallery__info">
-                                            <a class="popup-image" href="assets/img/gallery/gal-thum-02.jpg"><i
-                                                    class="fa-solid fa-plus"></i></a>
+                                @endif
+                                @if (app()->getLocale() == 'ru')
+                                    <div class="swiper-slide">
+                                        <div class="tp-gallery__item p-relative mb-70">
+                                            <div class="tp-gallery__img p-relative">
+                                                <img src="{{ $blog->getFirstMediaUrl() }}" alt="gallery-img">
+                                                <div class="tp-gallery__info">
+                                                    <a class="popup-image" href="{{ $blog->getFirstMediaUrl() }}"><i
+                                                            class="fa-solid fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="tp-gallery__content">
+                                                <h4 class="tp-gallery__title"><a
+                                                        href="{{ route('blog.show', $blog->id) }}">
+                                                        {{ $blog->title_ru }}
+                                                    </a>
+                                                </h4>
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tp-gallery__content">
-                                        <h4 class="tp-gallery__title"><a href="portfolio-details.html">Hiv Analysis &
-                                                Testing</a></h4>
-                                        <span><i class="fa-solid fa-tag"></i><a
-                                                href="services-details.html">Anaesthetist</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tp-gallery__item p-relative mb-70">
-                                    <div class="tp-gallery__img p-relative">
-                                        <img src="assets/img/gallery/gal-thum-03.jpg" alt="gallery-img">
-                                        <div class="tp-gallery__info">
-                                            <a class="popup-image" href="assets/img/gallery/gal-thum-03.jpg"><i
-                                                    class="fa-solid fa-plus"></i></a>
+                                @endif
+                                @if (app()->getLocale() == 'en')
+                                    <div class="swiper-slide">
+                                        <div class="tp-gallery__item p-relative mb-70">
+                                            <div class="tp-gallery__img p-relative">
+                                                <img src="{{ $blog->getFirstMediaUrl() }}" alt="gallery-img">
+                                                <div class="tp-gallery__info">
+                                                    <a class="popup-image" href="{{ $blog->getFirstMediaUrl() }}"><i
+                                                            class="fa-solid fa-plus"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="tp-gallery__content">
+                                                <h4 class="tp-gallery__title"><a
+                                                        href="{{ route('blog.show', $blog->id) }}">
+                                                        {{ $blog->title_en }}
+                                                    </a>
+                                                </h4>
+
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="tp-gallery__content">
-                                        <h4 class="tp-gallery__title"><a href="portfolio-details.html">Zyrtec Analysis</a>
-                                        </h4>
-                                        <span><i class="fa-solid fa-tag"></i><a
-                                                href="services-details.html">Gynaecologist</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tp-gallery__item p-relative mb-70">
-                                    <div class="tp-gallery__img p-relative">
-                                        <img src="assets/img/gallery/gal-thum-04.jpg" alt="gallery-img">
-                                        <div class="tp-gallery__info">
-                                            <a class="popup-image" href="assets/img/gallery/gal-thum-04.jpg"><i
-                                                    class="fa-solid fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="tp-gallery__content">
-                                        <h4 class="tp-gallery__title"><a href="portfolio-details.html">Asthma Apply</a>
-                                        </h4>
-                                        <span><i class="fa-solid fa-tag"></i><a
-                                                href="services-details.html">Genetics</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="tp-gallery__item p-relative mb-70">
-                                    <div class="tp-gallery__img p-relative">
-                                        <img src="assets/img/gallery/gal-thum-05.jpg" alt="gallery-img">
-                                        <div class="tp-gallery__info">
-                                            <a class="popup-image" href="assets/img/gallery/gal-thum-01.jpg"><i
-                                                    class="fa-solid fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="tp-gallery__content">
-                                        <h4 class="tp-gallery__title"><a href="portfolio-details.html">neurological
-                                                ANALYSIS</a></h4>
-                                        <span><i class="fa-solid fa-tag"></i><a
-                                                href="services-details.html">Forensic</a></span>
-                                    </div>
-                                </div>
-                            </div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -355,7 +333,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-12">
-                        <a class="tp-btn-second" href="portfolio-details.html">Explore More</a>
+                        <a class="tp-btn-second" href="{{route('frontend.blogs')}}">{{__('backend.explore')}}</a>
                     </div>
                 </div>
             </div>
@@ -437,52 +415,38 @@
                 <div class="row">
                     <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
                         <div class="appoinment-thumb">
-                            <img src="assets/img/banner/appoinment-01.jpg" alt="appoinment-img">
+                            <img src="{{asset('img/appoinment-01.jpg')}}" alt="appoinment-img">
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
                         <div class="visitor-info">
-                            <h4 class="appoinment-title mb-25"><i class="fa-light fa-file-signature"></i>Book your visit
+                            <h4 class="appoinment-title mb-25"><i class="fa-light fa-file-signature"></i>{{__('backend.contact')}}
                             </h4>
                             <div class="visitor-form">
-                                <form action="#">
+                                <form action="{{route('admin.contact.store')}}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="text" placeholder="Your name">
+                                                <input type="text" name="name" placeholder="Ism">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="email" placeholder="Your mail">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="visitor-form__input">
-                                                <input type="text" placeholder="Medical Research">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="visitor-form__input">
-                                                <input type="text" placeholder="mm / dd / yyyy">
+                                                <input type="number" name="number" placeholder="Telefon Raqami">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="visitor-form__input">
-                                                <textarea placeholder="Type your massage" name="message"></textarea>
+                                                <textarea placeholder="Xabar " name="description"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-12">
                                             <div class="visit-btn mt-20">
-                                                <button class="tp-btn">Book Now</button>
+                                                <button class="tp-btn">{{__('backend.send')}}</button>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8 col-md-8 col-12">
-                                            <div class="visit-serial mt-45">
-                                                <span>24/7 Emergency Service : <a href="tel:+88978897">+88 978 897 6545<i
-                                                            class="fa-regular fa-arrow-right"></i></a></span>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </form>
                             </div>
@@ -597,6 +561,23 @@
         <!-- team-area-end -->
 
         <!-- testimonial-area -->
+       
+        <!-- testimonial-area-end -->
+
+        <!-- brand-area -->
+        <div class="brand-area pt-130 pb-130">
+            <div class="container">
+                <div class="swiper-container brand-active">
+                    <div class="swiper-wrapper brand-items">
+                        @foreach (App\Models\Partners::all() as $partner)
+                            <div class="swiper-slide">
+                                <a href="{{$partner->link}}"><img src="{{$partner->getFirstMediaUrl()}}" alt="brand"></a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="testimonial-area testimonial-bg pt-125 pb-130" data-background="assets/img/shape/shape-bg-02.png">
             <div class="container">
                 <div class="row wow fadeInUp" data-wow-delay=".3s">
@@ -682,169 +663,7 @@
                 </div>
             </div>
         </section>
-        <!-- testimonial-area-end -->
-
-        <!-- brand-area -->
-        <div class="brand-area pt-130 pb-130">
-            <div class="container">
-                <div class="swiper-container brand-active">
-                    <div class="swiper-wrapper brand-items">
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-01.png" alt="brand"></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-02.png" alt="brand"></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-03.png" alt="brand"></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-04.png" alt="brand"></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-05.png" alt="brand"></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#"><img src="assets/img/brand/brand-04.png" alt="brand"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- brand-area-end -->
-
-        <!-- cta-area -->
-        <section class="cta-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="cta-bg theme-light-bg pt-65 pb-70" data-background="assets/img/shape/shape-bg-03.png">
-                            <div class="cta-content ml-90">
-                                <h2 class="cta-title mb-35">Looking for a best <br> lebatory Service</h2>
-                                <a href="tel:+9159008855" class="tp-cta-btn"><svg width="14" height="19"
-                                        viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="2" cy="2" r="2" fill="white" />
-                                        <circle cx="7" cy="2" r="2" fill="white" />
-                                        <circle cx="12" cy="2" r="2" fill="white" />
-                                        <circle cx="12" cy="7" r="2" fill="white" />
-                                        <circle cx="12" cy="12" r="2" fill="white" />
-                                        <circle cx="7" cy="7" r="2" fill="white" />
-                                        <circle cx="7" cy="12" r="2" fill="white" />
-                                        <circle cx="7" cy="17" r="2" fill="white" />
-                                        <circle cx="2" cy="7" r="2" fill="white" />
-                                        <circle cx="2" cy="12" r="2" fill="white" />
-                                    </svg><span>Call :</span>+91 590 088 55</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- cta-area-end -->
-
-        <!-- blog-area -->
-        <section class="blog-area pt-125 pb-100">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8 col-12">
-                        <div class="tp-section">
-                            <span class="tp-section__sub-title left-line mb-25">Waht’s New</span>
-                            <h3 class="tp-section__title mb-65">Blog & Article</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="tp-blog-arrow d-flex align-items-center">
-                            <div class="tp-blog-p"><i class="fa-regular fa-arrow-left"></i></div>
-                            <div class="tp-blog-n"><i class="fa-regular fa-arrow-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-container tp-blog-active wow fadeInUp" data-wow-delay=".3s">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="tp-blog mb-30">
-                                <div class="tp-blog__thumb p-relative fix">
-                                    <a href="#"><img src="assets/img/blog/blog-thumb-01.jpg" alt="blog-item"></a>
-                                    <div class="tp-blog__date text-center">
-                                        <h4>26<span>Dec</span></h4>
-                                    </div>
-                                </div>
-                                <div class="tp-blog__content">
-                                    <span class="tp-blog__category mb-30"><a href="blog-details.html">Medicine</a></span>
-                                    <h5 class="tp-blog__title mb-20"><a href="blog-details.html">Heart Diseases Tests
-                                            Ordered <br> By Doctors</a></h5>
-                                    <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...
-                                    </p>
-                                    <div class="tp-blog__btn">
-                                        <a href="blog.html">Read moRe</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-blog mb-30">
-                                <div class="tp-blog__thumb p-relative fix">
-                                    <a href="#"><img src="assets/img/blog/blog-thumb-02.jpg" alt="blog-item"></a>
-                                    <div class="tp-blog__date text-center">
-                                        <h4>26<span>Dec</span></h4>
-                                    </div>
-                                </div>
-                                <div class="tp-blog__content">
-                                    <span class="tp-blog__category mb-30"><a href="blog-details.html">Medicine</a></span>
-                                    <h5 class="tp-blog__title mb-20"><a href="blog-details.html">Heart Diseases Tests
-                                            Ordered <br> By Doctors</a></h5>
-                                    <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...
-                                    </p>
-                                    <div class="tp-blog__btn">
-                                        <a href="blog.html">Read moRe</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-blog mb-30">
-                                <div class="tp-blog__thumb p-relative fix">
-                                    <a href="#"><img src="assets/img/blog/blog-thumb-03.jpg" alt="blog-item"></a>
-                                    <div class="tp-blog__date text-center">
-                                        <h4>26<span>Dec</span></h4>
-                                    </div>
-                                </div>
-                                <div class="tp-blog__content">
-                                    <span class="tp-blog__category mb-30"><a href="blog-details.html">Medicine</a></span>
-                                    <h5 class="tp-blog__title mb-20"><a href="blog-details.html">Identifying bases of
-                                            disease <br> pathophysio</a></h5>
-                                    <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...
-                                    </p>
-                                    <div class="tp-blog__btn">
-                                        <a href="blog.html">Read moRe</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-blog mb-30">
-                                <div class="tp-blog__thumb p-relative fix">
-                                    <a href="#"><img src="assets/img/blog/blog-thumb-04.jpg" alt="blog-item"></a>
-                                    <div class="tp-blog__date text-center">
-                                        <h4>26<span>Dec</span></h4>
-                                    </div>
-                                </div>
-                                <div class="tp-blog__content">
-                                    <span class="tp-blog__category mb-30"><a href="blog-details.html">Medicine</a></span>
-                                    <h5 class="tp-blog__title mb-20"><a href="blog-details.html">Coronavirus global health
-                                            emergency</a></h5>
-                                    <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...
-                                    </p>
-                                    <div class="tp-blog__btn">
-                                        <a href="blog.html">Read moRe</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <!-- blog-area-end -->
 
     </main>

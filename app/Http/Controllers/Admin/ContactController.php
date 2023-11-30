@@ -30,7 +30,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->request->add(['status'=>0]);
+        $request->validate([
+            'name'=>'required',
+            'number'=>'required',
+            'description'=>'required'
+        ]);
+        Contact::create($request->all());
+        return back();
     }
 
     /**

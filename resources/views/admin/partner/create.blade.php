@@ -15,6 +15,11 @@
                                 @error('image')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
+                                <label for="">link</label>
+                                <input type="text" name="link" class="form-control" id="">
+                                @error('link')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                                 <label for="exampleInputEmail1" class="form-label">Name</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">

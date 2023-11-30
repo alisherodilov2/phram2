@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
+            $table->string('link');
             $table->string('name');
             $table->longText("description")->nullable(true);
             $table->string("name_ru");
