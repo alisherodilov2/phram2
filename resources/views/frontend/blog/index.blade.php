@@ -40,6 +40,7 @@
                             </div>
                         @endif
                         @if (app()->getLocale() == 'ru')
+                        
                             <div class="col-xl-4 col-md-6">
                                 <div class="tp-team mb-50 wow fadeInUp" data-wow-delay=".2s">
                                     <div class="tp-team__thumb fix">
