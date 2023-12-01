@@ -22,6 +22,9 @@
                                     title_en
                                 </th>
                                 <th>
+                                    Image
+                                </th>
+                                <th>
                                     Actions
                                 </th>
                             </thead>
@@ -30,6 +33,10 @@
                                     <tr>
                                         <td>
                                             {{ $data->id }}
+                                        </td>
+                                        <td style="width: 250px;">
+                                            <img src="{{ $data->getFirstMediaUrl() ?? '' }}" style="width: 100%;"
+                                                alt="">
                                         </td>
                                         <td>
                                             {{ $data->title }}
@@ -40,6 +47,7 @@
                                         <td>
                                             {{ $data->title_en }}
                                         </td>
+                                       
                                         <td>
                                             <div class="d-flex">
                                                 <form action="{{ route('admin.vacancy.destroy', $data->id) }}"

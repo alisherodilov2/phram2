@@ -17,6 +17,13 @@
                                         <span class="text-danger">{{ $massage }}</span>
                                     @enderror
                                 </div>
+                                <div class="col-md-6 mt-2">
+                                    <label for="">Image</label>
+                                    <input type="file" class="form-control" name="image" placeholder="title">
+                                    @error('image')
+                                        <span class="text-danger">{{ $massage }}</span>
+                                    @enderror
+                                </div>
                                 <div class="col-md-12 mt-2">
                                     <label for="">Describtion</label>
                                     <textarea name="description" class="form-control" id="description" cols="30" rows="10"></textarea>

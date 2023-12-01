@@ -29,7 +29,7 @@
                                         <a href="#"><img src="{{ $blog->getFirstMediaUrl() }}" alt="team-thumb"></a>
                                     </div>
                                     <div class="tp-team__content">
-                                        <h4 class="tp-team__title mb-15"><a href="{{route('blogs.show'  , $blog->id)}}">{{ $blog->title }}</a>
+                                        <h4 class="tp-team__title mb-15"><a href="{{route('blog.show'  , $blog->id)}}">{{ $blog->title }}</a>
                                         </h4>
                                         <p></p>
                                         <div class="tp-team__social">
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="tp-team__content">
                                         <h4 class="tp-team__title mb-15"><a
-                                                href="{{route('blogs.show'  , $blog->id)}}">{{ $blog->title_ru }}</a>
+                                                href="{{route('blog.show'  , $blog->id)}}">{{ $blog->title_ru }}</a>
                                         </h4>
                                         <p></p>
                                         <div class="tp-team__social">
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="tp-team__content">
                                         <h4 class="tp-team__title mb-15"><a
-                                                href="{{route('blogs.show'  , $blog->id)}}">{{ $blog->title_en }}</a>
+                                                href="{{route('blog.show'  , $blog->id)}}">{{ $blog->title_en }}</a>
                                         </h4>
                                         <p></p>
                                         <div class="tp-team__social">

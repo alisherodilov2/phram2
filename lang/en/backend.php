@@ -17,5 +17,10 @@ return [
     'recentPost'=>'Recent Posts',
     'send'=>'Leave Message',
     'contact'=>'Contact',
-    'explore'=>'Explore More'
+    'explore'=>'Explore More',
+    //menu
+    'home'=>'Home',
+    'products'=>'Products',
+    'blogMenu'=>'News',
+    'vacancy'=>'Vacancy'
 ];

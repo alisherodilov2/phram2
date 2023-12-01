@@ -17,5 +17,10 @@ return [
     'recentPost'=>'Oxirgi Postlar',
     'send'=>'Xabar qoldirish',
     'contact'=>'Kontakt',
-    'explore'=>"Koʻproq ma'lumot"
+    'explore'=>"Koʻproq ma'lumot",
+    //menu
+    'home'=>'Bosh sahifa',
+    'products'=>'Mahsulotlar',
+    'blogMenu'=>'Yangiliklar',
+    'vacancy'=>'Vakansiya'
 ];

@@ -333,7 +333,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-lg-12">
-                        <a class="tp-btn-second" href="{{route('frontend.blogs')}}">{{__('backend.explore')}}</a>
+                        <a class="tp-btn-second" href="{{ route('frontend.blogs') }}">{{ __('backend.explore') }}</a>
                     </div>
                 </div>
             </div>
@@ -415,15 +415,16 @@
                 <div class="row">
                     <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
                         <div class="appoinment-thumb">
-                            <img src="{{asset('img/appoinment-01.jpg')}}" alt="appoinment-img">
+                            <img src="{{ asset('img/appoinment-01.jpg') }}" alt="appoinment-img">
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
                         <div class="visitor-info">
-                            <h4 class="appoinment-title mb-25"><i class="fa-light fa-file-signature"></i>{{__('backend.contact')}}
+                            <h4 class="appoinment-title mb-25"><i
+                                    class="fa-light fa-file-signature"></i>{{ __('backend.contact') }}
                             </h4>
                             <div class="visitor-form">
-                                <form action="{{route('admin.contact.store')}}" method="POST">
+                                <form action="{{ route('admin.contact.store') }}" method="POST">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -443,10 +444,10 @@
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-12">
                                             <div class="visit-btn mt-20">
-                                                <button class="tp-btn">{{__('backend.send')}}</button>
+                                                <button class="tp-btn">{{ __('backend.send') }}</button>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </form>
                             </div>
@@ -456,15 +457,14 @@
             </div>
         </section>
         <!-- appoinment-area-end -->
-
         <!-- team-area -->
         <section class="team-area grey-bg pt-120 pb-80" data-background="assets/img/shape/shape-bg-01.png">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-md-8 col-12">
                         <div class="tp-section">
-                            <span class="tp-section__sub-title left-line mb-25">Our Team</span>
-                            <h3 class="tp-section__title mb-75">Meet Specialist</h3>
+                            <p></p>
+                            <h3 class="tp-section__title mb-75">{{__('backend.products')}}</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-12">
@@ -476,84 +476,21 @@
                 </div>
                 <div class="swiper-container team-active wow fadeInUp" data-wow-delay=".3s">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="tp-team mb-50">
-                                <div class="tp-team__thumb fix">
-                                    <a href="#"><img src="assets/img/team/team-thumb-01.jpg" alt="team-thumb"></a>
-                                </div>
-                                <div class="tp-team__content">
-                                    <h4 class="tp-team__title mb-15"><a href="team-details.html">Cameron Williamson</a>
-                                    </h4>
-                                    <span class="tp-team__position mb-30">Genetic Specialist</span>
-                                    <p>Providing insight-driven transformation to investment banks, wealth and asset mana,
-                                        exchanges, Finance </p>
-                                    <div class="tp-team__social">
-                                        <a class="tp-youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                                        <a class="tp-twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a class="tp-fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a class="tp-skype" href="#"><i class="fa-brands fa-skype"></i></a>
+                        @foreach (App\Models\Products::all() as $product)
+                            <div class="swiper-slide">
+                                <div class="tp-team mb-50">
+                                    <div class="tp-team__thumb fix">
+                                        <a href="{{$product->link}}"><img src="{{$product->getFirstMediaUrl()}}"
+                                                alt="team-thumb"></a>
+                                    </div>
+                                    <div class="tp-team__content">
+                                        <h4 class="tp-team__title mb-15"><a href="{{$product->link}}">{{$product->title}}</a>
+                                        </h4>
+                                        <p>  {!! substr($product->description_en, 0, 130) !!}...</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-team mb-50">
-                                <div class="tp-team__thumb fix">
-                                    <a href="#"><img src="assets/img/team/team-thumb-02.jpg" alt="team-thumb"></a>
-                                </div>
-                                <div class="tp-team__content">
-                                    <h4 class="tp-team__title mb-15"><a href="team-details.html">Savannah Nguyen</a></h4>
-                                    <span class="tp-team__position mb-30">Anaesthetist Specialist</span>
-                                    <p>Providing insight-driven transformation to investment banks, wealth and asset mana,
-                                        exchanges, Finance </p>
-                                    <div class="tp-team__social">
-                                        <a class="tp-youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                                        <a class="tp-twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a class="tp-fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a class="tp-skype" href="#"><i class="fa-brands fa-skype"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-team mb-50">
-                                <div class="tp-team__thumb fix">
-                                    <a href="#"><img src="assets/img/team/team-thumb-03.jpg" alt="team-thumb"></a>
-                                </div>
-                                <div class="tp-team__content">
-                                    <h4 class="tp-team__title mb-15"><a href="team-details.html">Darlene Robertson</a>
-                                    </h4>
-                                    <span class="tp-team__position mb-30">Gynaecologist Specialist</span>
-                                    <p>Providing insight-driven transformation to investment banks, wealth and asset mana,
-                                        exchanges, Finance </p>
-                                    <div class="tp-team__social">
-                                        <a class="tp-youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                                        <a class="tp-twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a class="tp-fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a class="tp-skype" href="#"><i class="fa-brands fa-skype"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-team mb-50">
-                                <div class="tp-team__thumb fix">
-                                    <a href="#"><img src="assets/img/team/team-thumb-04.jpg" alt="team-thumb"></a>
-                                </div>
-                                <div class="tp-team__content">
-                                    <h4 class="tp-team__title mb-15"><a href="team-details.html">Jhon Methweu</a></h4>
-                                    <span class="tp-team__position mb-30">Radiologist Specialist</span>
-                                    <p>Providing insight-driven transformation to investment banks, wealth and asset mana,
-                                        exchanges, Finance </p>
-                                    <div class="tp-team__social">
-                                        <a class="tp-youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                                        <a class="tp-twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-                                        <a class="tp-fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a class="tp-skype" href="#"><i class="fa-brands fa-skype"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -561,7 +498,7 @@
         <!-- team-area-end -->
 
         <!-- testimonial-area -->
-       
+
         <!-- testimonial-area-end -->
 
         <!-- brand-area -->
@@ -571,7 +508,8 @@
                     <div class="swiper-wrapper brand-items">
                         @foreach (App\Models\Partners::all() as $partner)
                             <div class="swiper-slide">
-                                <a href="{{$partner->link}}"><img src="{{$partner->getFirstMediaUrl()}}" alt="brand"></a>
+                                <a href="{{ $partner->link }}"><img src="{{ $partner->getFirstMediaUrl() }}"
+                                        alt="brand"></a>
                             </div>
                         @endforeach
                     </div>
@@ -663,7 +601,7 @@
                 </div>
             </div>
         </section>
-       
+
         <!-- blog-area-end -->
 
     </main>

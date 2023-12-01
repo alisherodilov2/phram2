@@ -54,7 +54,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <form action="{{ route('admin.vacancy.destroy', $data->id) }}"
+                                                <form action="{{ route('admin.products.destroy', $data->id) }}"
                                                     method="POST">
                                                     @csrf @method('DELETE')<button class="btn btn-danger">Delete</button>
                                                 </form>

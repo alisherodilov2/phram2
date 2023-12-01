@@ -37,9 +37,10 @@ class VacancyController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            
+            'image'=>'required'
         ]);
-        Vacancy::create($request->all());
+        $vacancy = Vacancy::create($request->all());
+        $vacancy->addMediaFromRequest('image')->usingName($vacancy->title)->toMediaCollection();
         return redirect()->route("admin.vacancy.index");
     }
 

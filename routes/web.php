@@ -26,6 +26,9 @@ Route::group(['middleware' => 'language'], function () {
     });
     Route::get('blogs/{id}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('blog.show');
     Route::get('blogs', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blogs');
+    Route::get('products' ,[App\Http\Controllers\Frontend\ProductsController::class , 'index'])->name('frontend.products');
+    Route::get('/vacancy' , [App\Http\Controllers\Frontend\VacancyController::class , 'index'])->name('frontend.vacancy');
+    Route::get('vacansy/show/{id}' , [App\Http\Controllers\Frontend\VacancyController::class , 'show'])->name('frontend.vacancy.show');
 });
 Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])->name("login");
 Route::get("/logout", [App\Http\Controllers\Auth\AuthController::class, 'logout'])->name("auth.logout");
