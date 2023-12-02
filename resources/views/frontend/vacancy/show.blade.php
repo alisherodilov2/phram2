@@ -1,9 +1,11 @@
 @extends('frontend.layouts.master')
+@section('header')
+    @include('frontend.layouts.header1')
+@endsection
 @section('content')
     <main>
-
         <!-- breadcrumb-area -->
-        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
+        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" style="background-attachment: fixed;"
             data-background="{{ $vacancy->getFirstMediaUrl() ?? '' }}">
             <div class="container">
                 <div class="row align-items-center">
@@ -47,53 +49,56 @@
                                                 </p>
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </article>
                             <div class="postbox__comment mb-65">
-                                <h3 class="postbox__comment-title"></h3>
+                                <h3 class="postbox__comment-title">{!! __('backend.sendMessaga') !!}</h3>
                                 <div class="col-lg-12 col-md-7 col-12">
-                                    <div class="contactform wow fadeInRight" data-wow-delay=".4s">
-                                        <h4 class="contactform__title mb-35">Send us a Massage :</h4>
+                                    <div class="contactform wow fadeInRight">
                                         <div class="contactform__list mb-60">
-                                            <form id="contact-form" action="assets/mail.php" method="post">
+                                            <form action="{{ route('resume.store', $vacancy->id) }}" method="post">
+                                                @csrf
                                                 <div class="row">
+                                                    <div class="col-lg-12">
+                                                        @if (\Session::has('msg'))
+                                                            <div class="text-success">
+                                                                <ul>
+                                                                    <li>{!! \Session::get('msg') !!}</li>
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                    </div>
                                                     <div class="col-lg-6">
                                                         <div class="contactform__input mb-30">
                                                             <input name="name" type="text"
-                                                                placeholder="Enter your Name">
+                                                                placeholder="Enter your Name" name="name">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="contactform__input mb-30">
                                                             <input name="email" type="email"
-                                                                placeholder="Enter your mail">
+                                                                placeholder="Enter your mail" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="contactform__input mb-30">
                                                             <input name="number" type="text"
-                                                                placeholder="Enter your number">
+                                                                placeholder="Enter your number" name="number">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="contactform__input mb-30">
-                                                            <input name="website" type="text"
-                                                                placeholder="Enter your website">
-                                                        </div>
-                                                    </div>
+
                                                     <div class="col-lg-12">
                                                         <div class="contactform__input mb-30">
-                                                            <textarea name="message" placeholder="Type your comment"></textarea>
+                                                            <textarea name="description" name="description" placeholder="Type your comment"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="contactform__input mb-30-btn">
-                                                            <button type="submit" class="tp-btn">Send Massage</button>
+                                                            <button type="submit"
+                                                                class="tp-btn">{{ __('backend.send') }}</button>
                                                         </div>
-                                                        <p class="ajax-response"></p>
+
                                                     </div>
                                                 </div>
                                             </form>

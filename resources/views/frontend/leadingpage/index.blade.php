@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master')
+@section('header')
+    @include('frontend.layouts.header')
+@endsection
 @section('content')
     <main>
         <!-- banner-area -->
@@ -204,8 +207,8 @@
                                 <i></i>
                             </div>
                             <div class="counter__content">
-                                <h4 class="counter__title"><span class="counter">1492</span></h4>
-                                <p>Laboratories in 100+ states</p>
+                                <h4 class="counter__title"><span>35000+</span></h4>
+                                <p>{{ __('backend.yillik') }}</p>
                             </div>
                         </div>
                     </div>
@@ -215,8 +218,8 @@
                                 <i></i>
                             </div>
                             <div class="counter__content">
-                                <h4 class="counter__title"><span class="counter">152</span></h4>
-                                <p>Laboratory specialists</p>
+                                <h4 class="counter__title"><span>5000+</span></h4>
+                                <p>{{ __('backend.familly') }}</p>
                             </div>
                         </div>
                     </div>
@@ -226,8 +229,8 @@
                                 <i></i>
                             </div>
                             <div class="counter__content">
-                                <h4 class="counter__title"><span class="counter">1022</span></h4>
-                                <p>Material collection points</p>
+                                <h4 class="counter__title"><span>20000+</span></h4>
+                                <p>{{ __('backend.month') }}</p>
                             </div>
                         </div>
                     </div>
@@ -237,8 +240,8 @@
                                 <i></i>
                             </div>
                             <div class="counter__content">
-                                <h4 class="counter__title"><span class="counter">24332</span></h4>
-                                <p>Patients diagnosed in 2022</p>
+                                <h4 class="counter__title"><span>35+</span></h4>
+                                <p>{{ __('backend.productsData') }}</p>
                             </div>
                         </div>
                     </div>
@@ -397,14 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <div class="tp-choose-option">
-                            <span>Laboratories Used For Scientific Research : <a href="#">Take Many Forms<i
-                                        class="fa-solid fa-arrow-right"></i></a></span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
         <!-- choose-area-end -->
@@ -464,7 +460,7 @@
                     <div class="col-lg-8 col-md-8 col-12">
                         <div class="tp-section">
                             <p></p>
-                            <h3 class="tp-section__title mb-75">{{__('backend.products')}}</h3>
+                            <h3 class="tp-section__title mb-75">{{ __('backend.products') }}</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-12">
@@ -480,13 +476,14 @@
                             <div class="swiper-slide">
                                 <div class="tp-team mb-50">
                                     <div class="tp-team__thumb fix">
-                                        <a href="{{$product->link}}"><img src="{{$product->getFirstMediaUrl()}}"
-                                                alt="team-thumb"></a>
+                                        <a href="{{ route('frontend.products.show', $product->id) }}"><img
+                                                src="{{ $product->getFirstMediaUrl() }}" alt="team-thumb"></a>
                                     </div>
                                     <div class="tp-team__content">
-                                        <h4 class="tp-team__title mb-15"><a href="{{$product->link}}">{{$product->title}}</a>
+                                        <h4 class="tp-team__title mb-15"><a
+                                                href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title }}</a>
                                         </h4>
-                                        <p>  {!! substr($product->description_en, 0, 130) !!}...</p>
+                                        <p> {!! substr($product->description_en, 0, 130) !!}...</p>
                                     </div>
                                 </div>
                             </div>
@@ -522,73 +519,27 @@
                     <div class="col-lg-12">
                         <div class="tp-section text-center">
                             <span
-                                class="tp-section__sub-title sub-title-white left-line-white right-line-white mb-25">Testimonial</span>
-                            <h3 class="tp-section__title title-white mb-70">Customer Feedback</h3>
+                                class="tp-section__sub-title sub-title-white left-line-white right-line-white mb-25">{{ __('backend.review') }}</span>
+                            <h3 class="tp-section__title title-white mb-70">{{ __('backend.comment') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-container tp-test-active pt-40">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="tp-testi p-relative mb-70">
-                                <div class="tp-testi__avata">
-                                    <img src="assets/img/icon/testi-ava-01.jpg" alt="testimonial-avata">
-                                </div>
-                                <div class="tp-testi__content text-center">
-                                    <p>BIoxlab is another theme that is beautiful and professinally constructed by the
-                                        Developers. The price for the template is checp but not qualityh of product.what a
-                                        bargain , This theme works for many types of web sites and seems to be durble dows
-                                        nt break and it.</p>
-                                    <h5 class="tp-testi__avata-title">Darlene Robertson</h5>
-                                    <span class="tp-testi__ava-position">Secretary of (FlaxStudio)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-testi p-relative mb-70">
-                                <div class="tp-testi__avata">
-                                    <img src="assets/img/icon/testi-ava-02.jpg" alt="testimonial-avata">
-                                </div>
-                                <div class="tp-testi__content text-center">
-                                    <p>BIoxlab is another theme that is beautiful and professinally constructed by the
-                                        Developers. The price for the template is checp but not qualityh of product.what a
-                                        bargain , This theme works for many types of web sites and seems to be durble dows
-                                        nt break and it.</p>
-                                    <h5 class="tp-testi__avata-title">Courtney Henry</h5>
-                                    <span class="tp-testi__ava-position">CEO of (FlaxStudio)</span>
+                        @foreach (App\Models\Comment::all() as $comment)
+                            <div class="swiper-slide">
+                                <div class="tp-testi p-relative mb-70">
+
+                                    <div class="tp-testi__content text-center">
+                                        <p>
+                                            {{ $comment->description }}
+                                        </p>
+                                        <h5 class="tp-testi__avata-title">{{ $comment->name }}</h5>
+                                        <span class="tp-testi__ava-position">{{ $comment->title }}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-testi p-relative mb-70">
-                                <div class="tp-testi__avata">
-                                    <img src="assets/img/icon/testi-ava-03.jpg" alt="testimonial-avata">
-                                </div>
-                                <div class="tp-testi__content text-center">
-                                    <p>BIoxlab is another theme that is beautiful and professinally constructed by the
-                                        Developers. The price for the template is checp but not qualityh of product.what a
-                                        bargain , This theme works for many types of web sites and seems to be durble dows
-                                        nt break and it.</p>
-                                    <h5 class="tp-testi__avata-title">Kathryn Murphy</h5>
-                                    <span class="tp-testi__ava-position">Manager of (FlaxStudio)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tp-testi p-relative mb-70">
-                                <div class="tp-testi__avata">
-                                    <img src="assets/img/icon/testi-ava-07.png" alt="testimonial-avata">
-                                </div>
-                                <div class="tp-testi__content text-center">
-                                    <p>BIoxlab is another theme that is beautiful and professinally constructed by the
-                                        Developers. The price for the template is checp but not qualityh of product.what a
-                                        bargain , This theme works for many types of web sites and seems to be durble dows
-                                        nt break and it.</p>
-                                    <h5 class="tp-testi__avata-title">Darlene Robertson</h5>
-                                    <span class="tp-testi__ava-position">Programmer of (FlaxStudio)</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="row text-center">

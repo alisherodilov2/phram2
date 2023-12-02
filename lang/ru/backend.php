@@ -23,7 +23,19 @@ return [
     'home'=>'Главная страница',
     'products'=>'Продукты',
     'blogMenu'=>'Новости',
-    'vacancy'=>'Bакансия'
-    
+    'vacancy'=>'Bакансия',
+    'comment'=>'Комментарии клиентов',
+    'review'=>'Комментарии',
+    //new data
+    'yillik'=>'Йиллик Махсулотлар',
+    'familly'=>'Счастливые семьи',
+    'month'=>'Ежемесячные продукты',
+    'productsData'=>'Ежемесячные продукты',
+    //new
+    'createdAt'=>'Время создания',
+    //vacancy
+    'sendMessaga'=>"<b>Оставить информацию</b>",
+    //menu link
+    'menuLink'=>'Ссылки'
 
 ];

@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    @include('frontend.layouts.header')
+    @yield('header')
     <!-- main-area -->
     @yield('content')
     <!-- main-area-end -->

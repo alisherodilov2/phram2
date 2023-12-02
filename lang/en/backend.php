@@ -22,5 +22,18 @@ return [
     'home'=>'Home',
     'products'=>'Products',
     'blogMenu'=>'News',
-    'vacancy'=>'Vacancy'
+    'vacancy'=>'Vacancy',
+    'comment'=>'Comments from customers',
+    'review'=>'Comments',
+    //new data
+    'yillik'=>'Yearly products',
+    'familly'=>'Happy families',
+    'month'=>'Monthly products',
+    'productsData'=>'Monthly products',
+    //new
+    'createdAt'=>'Created At',
+    //vacancy
+    'sendMessaga'=>"Leave a message",
+    //menu 
+    'menuLink'=>'Menu Links'
 ];

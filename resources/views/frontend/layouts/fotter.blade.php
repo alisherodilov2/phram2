@@ -9,24 +9,22 @@
                    </h4>
                    <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo claritatem itamconse quat.Exerci tation ullamcorper.</p>
                    <div class="footer-widget__social">
-                      <a class="tp-f-youtube" href="#"><i class="fa-brands fa-youtube"></i></a>
-                      <a class="tp-f-twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-                      <a class="tp-f-fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                      <a class="tp-f-skype" href="#"><i class="fa-brands fa-skype"></i></a>
+                      <a class="tp-f-youtube" href="https://www.youtube.com/@pertinuz"><i class="fa-brands fa-youtube"></i></a>
+                      <a class="tp-f-fb" href="https://www.facebook.com/doralineuzb"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a class="tp-f-fb" href="https://t.me/DoraLine_company"><i class="fa-brands fa-telegram"></i></a>
+                      <a class="tp-f-fb" href="https://www.instagram.com/doraline_companyy"><i class="fa-brands fa-instagram"></i></a>
                    </div>
                 </div>
              </div>
              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="footer-widget footer-col-2 mb-50 wow fadeInUp" data-wow-delay=".4s">
-                   <h4 class="footer-widget__title mb-20">Useful links</h4>
+                   <h4 class="footer-widget__title mb-20">{{__('backend.menuLink')}}</h4>
                    <div class="footer-widget__links">
                       <ul>
-                         <li><a href="contact.html">Contact us</a></li>
-                         <li><a href="about.html">Help & About us</a></li>
-                         <li><a href="shop-details.html">Shipping & Returns</a></li>
-                         <li><a href="shop-details.html">Refund Policy</a></li>
-                         <li><a href="about.html">About us</a></li>
-                         <li><a href="services-details.html">Services</a></li>
+                         <li><a href="contact.html">{{__('backend.contact')}}</a></li>
+                         <li><a href="{{route('frontend.products')}}">{{__('backend.products')}}</a></li>
+                         <li><a href="{{route('frontend.vacancy')}}">{{__('backend.vacancy')}}</a></li>
+                         <li><a href="{{ route('frontend.blogs') }}">{{__('backend.blogMenu')}}</a>
                       </ul>
                    </div>
                 </div>

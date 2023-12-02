@@ -24,11 +24,16 @@ Route::group(['middleware' => 'language'], function () {
     Route::get('/', function () {
         return view('frontend.leadingpage.index');
     });
-    Route::get('blogs/{id}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('blog.show');
+    Route::get('blogs/show/{id}', [App\Http\Controllers\Frontend\BlogController::class, 'show'])->name('blog.show');
     Route::get('blogs', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('frontend.blogs');
-    Route::get('products' ,[App\Http\Controllers\Frontend\ProductsController::class , 'index'])->name('frontend.products');
-    Route::get('/vacancy' , [App\Http\Controllers\Frontend\VacancyController::class , 'index'])->name('frontend.vacancy');
-    Route::get('vacansy/show/{id}' , [App\Http\Controllers\Frontend\VacancyController::class , 'show'])->name('frontend.vacancy.show');
+    //products
+    Route::get('products', [App\Http\Controllers\Frontend\ProductsController::class, 'index'])->name('frontend.products');
+    Route::get('products/show/{id}', [App\Http\Controllers\Frontend\ProductsController::class, 'show'])->name('frontend.products.show');
+    //vacancy
+    Route::get('/vacancy', [App\Http\Controllers\Frontend\VacancyController::class, 'index'])->name('frontend.vacancy');
+    Route::get('vacansy/show/{id}', [App\Http\Controllers\Frontend\VacancyController::class, 'show'])->name('frontend.vacancy.show');
+    //create Resume
+    Route::post('resume/store/{id}'  , [App\Http\Controllers\Frontend\ResumeController::class , 'store'])->name("resume.store");
 });
 Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])->name("login");
 Route::get("/logout", [App\Http\Controllers\Auth\AuthController::class, 'logout'])->name("auth.logout");
@@ -42,5 +47,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::resource("products", App\Http\Controllers\Admin\ProductsController::class);
     Route::resource("contact", App\Http\Controllers\Admin\ContactController::class);
     Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class);
+    Route::resource('comment', App\Http\Controllers\Admin\CommentController::class);
 });
 //frontend page

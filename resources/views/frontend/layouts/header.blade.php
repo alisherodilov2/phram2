@@ -29,10 +29,10 @@
                     </div>
                 </div>
                 <div class="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
-                    <div class="tp-bt-btn-banner">
+                    <div class="tp-bt-btn-banner ">
                         <div class="header-cart-order d-flex align-items-center justify-content-end">
                             <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                                <div class="tp-cart-icon-area">
+                                <div class="tp-cart-icon-area ">
                                     <i class="fa-solid fa-globe"></i>
                                     <div class="tpcarticon">
                                         <ul>

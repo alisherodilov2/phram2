@@ -37,6 +37,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Blogs
                 </a>
+                <a class="nav-link" href="{{route('admin.comment.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                    Comment
+                </a>
                 
             </div>
         </div>

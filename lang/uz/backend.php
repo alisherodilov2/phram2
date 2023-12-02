@@ -22,5 +22,18 @@ return [
     'home'=>'Bosh sahifa',
     'products'=>'Mahsulotlar',
     'blogMenu'=>'Yangiliklar',
-    'vacancy'=>'Vakansiya'
+    'vacancy'=>'Vakansiya',
+    'comment'=>'Mijzolar tomonidan izohlar',
+    'review'=>'Commentlar',
+    //new data
+    'yillik'=>'Yillik mahsulotlar',
+    'familly'=>'Baxtli oilalar',
+    'month'=>'Oylik mahsulotlar',
+    'productsData'=>'Oylik mahsulotlar',
+    //new
+    'createdAt'=>'Yaratilgan vaqt',
+    'sendMessaga'=>"Ma'lumot qoldirish",
+    //menu
+    'menuLink'=>'Kerakli Ma\'lumotlar'
+
 ];
