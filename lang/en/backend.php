@@ -37,4 +37,14 @@ return [
     //menu 
     'menuLink'=>'Menu Links',
     'sek'=>'Monday - Friday 09:00 am - 05:00 Pmd'
+    ,
+    //contact
+    'contactMain'=>'Biz bilan bog\'lanish',
+    'addres'=>'Adres',
+    'number'=>'Phone number',
+    //meesa
+    'eName'=>'Enter your Name',
+    'eMail'=>'Enter your mail',
+    'eNumber'=>'Enter your number',
+    'message'=>'Message'
 ];

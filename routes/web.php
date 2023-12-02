@@ -33,7 +33,10 @@ Route::group(['middleware' => 'language'], function () {
     Route::get('/vacancy', [App\Http\Controllers\Frontend\VacancyController::class, 'index'])->name('frontend.vacancy');
     Route::get('vacansy/show/{id}', [App\Http\Controllers\Frontend\VacancyController::class, 'show'])->name('frontend.vacancy.show');
     //create Resume
-    Route::post('resume/store/{id}'  , [App\Http\Controllers\Frontend\ResumeController::class , 'store'])->name("resume.store");
+    Route::post('resume/storet/{id}', [App\Http\Controllers\Frontend\ResumeController::class, 'store'])->name("resume.store");
+    Route::get('contact', [App\Http\Controllers\Frontend\ContactController::class, 'index'])->name('frontend.contact.index');
+    Route::post('contact/create', [App\Http\Controllers\Frontend\ContactController::class, 'create'])->name('frontend.contact.create');
+
 });
 Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])->name("login");
 Route::get("/logout", [App\Http\Controllers\Auth\AuthController::class, 'logout'])->name("auth.logout");

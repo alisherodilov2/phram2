@@ -35,5 +35,16 @@ return [
     'sendMessaga'=>"Ma'lumot qoldirish",
     //menu
     'menuLink'=>'Kerakli Ma\'lumotlar',
-    'sek'=>'Dushanba - Juma 09:00 dan 17:00 gachad'
+    'sek'=>'Dushanba - Juma 09:00 dan 17:00 gachad',
+    // contact
+    'contactMain'=>'Contact us',
+    'addres'=>'Address line',
+    'number'=>'Telefon Raqam',
+
+    'eName'=>'Ismingizni kiriting',
+     'eMail'=>'Email manzilingizni kiriting', 
+     'eNumber'=>'Raqamingizni kiriting',
+    'message'=>'xabar'
+
+
 ];

@@ -49,7 +49,8 @@
                                     <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a></li>
 
                                     <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a>
-
+                                    <li><a href="{{ route('frontend.contact.index') }}">{{ __('backend.contact') }}</a>
+                                        
                                 </ul>
                                 </li>
 
