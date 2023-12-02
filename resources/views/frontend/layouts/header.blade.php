@@ -72,7 +72,7 @@
         <div class="row align-items-center">
             <div class="col-4">
                 <div class="tp-mob-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png" alt="logo"></a>
                 </div>
             </div>
             <div class="col-8">

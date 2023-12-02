@@ -1,9 +1,8 @@
 <header class="d-none d-xl-block">
     <div class="header-custom" id="header-sticky">
         <div class="header-logo-box">
-            <a href="/"><img
-                src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
-                alt="logo"></a>
+            <a href="/"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+                    alt="logo"></a>
         </div>
         <div class="header-menu-box">
             <div class="header-menu-top">
@@ -23,13 +22,13 @@
                                 <circle cx="2" cy="7" r="2" fill="#0E63FF" />
                                 <circle cx="2" cy="12" r="2" fill="#0E63FF" />
                             </svg>
-                            <span>Help Desk :</span>
-                            <a href="tel:+9159008855"> +91 590 088 55 </a>
+                            <span></span>
+                            <a href="tel:+9159008855"> (+998)94 211 70 10 </a>
                         </div>
                     </div>
                     <div class="col-lg-8">
                         <div class="header-time">
-                            <span><i class="fa-light fa-clock-ten"></i> Monday - Friday 09:00 am - 05:00 Pm</span>
+                            <span><i class="fa-light fa-clock-ten"></i>{{__('')}}</span>
                             <span>Monday - Friday 09:00 am - 05:00 Pm</span>
                         </div>
                     </div>
@@ -41,15 +40,15 @@
                         <div class="main-menu main-menu-second">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="/">{{__('backend.home')}}</a>
+                                    <li><a href="/">{{ __('backend.home') }}</a>
 
                                     </li>
-                                    <li><a href="{{route('frontend.products')}}">{{__('backend.products')}}</a>
+                                    <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a>
 
                                     </li>
-                                    <li><a href="{{route('frontend.vacancy')}}">{{__('backend.vacancy')}}</a></li>
+                                    <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a></li>
 
-                                    <li><a href="{{ route('frontend.blogs') }}">{{__('backend.blogMenu')}}</a>
+                                    <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a>
 
                                 </ul>
                                 </li>
@@ -113,7 +112,9 @@
         <div class="row align-items-center">
             <div class="col-md-4 col-10">
                 <div class="tp-mob-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    <a href="index.html"><img
+                            src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+                            alt="logo"></a>
                 </div>
             </div>
             <div class="col-md-8 col-2">
@@ -147,18 +148,13 @@
 <div class="tpsideinfo tp-side-info-area">
     <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
     <div class="tpsideinfo__logo mb-40">
-        <a href="index.html"><img src="assets/img/logo/white-logo.png" alt="logo"></a>
+        <a href="index.html"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+                alt="logo"></a>
     </div>
 
     <div class="mobile-menu"></div>
 
-    <div class="tpsideinfo__content mb-60">
-        <p class=" d-none d-xl-block">Our mission is to ensure the generation of accurate and precise findings.</p>
-        <span>Contact Us</span>
-        <a href="#"><i class="fa-solid fa-star"></i>Ta-134/A, Gulshan Badda Link </a>
-        <a href="tel:61383766284"><i class="fa-solid fa-star"></i>61 383 766 284</a>
-        <a href="mailto:noreply@envato.com"><i class="fa-solid fa-star"></i>noreply@envato.com</a>
-    </div>
+
     <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
         <span>Get Update</span>
         <div class="tpsideinfo__content-inputarea-input">

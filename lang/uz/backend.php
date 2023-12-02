@@ -34,6 +34,6 @@ return [
     'createdAt'=>'Yaratilgan vaqt',
     'sendMessaga'=>"Ma'lumot qoldirish",
     //menu
-    'menuLink'=>'Kerakli Ma\'lumotlar'
-
+    'menuLink'=>'Kerakli Ma\'lumotlar',
+    'sek'=>'Dushanba - Juma 09:00 dan 17:00 gachad'
 ];

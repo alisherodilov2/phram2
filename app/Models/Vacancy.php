@@ -18,4 +18,7 @@ class Vacancy extends Model implements HasMedia
         'description_ru',
         'description_en'
     ];
+    public function resumes(){
+        return $this->hasMany(Resume::class , 'vacancy_id');
+    }
 }

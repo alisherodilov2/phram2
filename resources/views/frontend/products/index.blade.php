@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="tp-section text-center">
-                            <span class="tp-section__sub-title left-line right-line mb-25">Our Specialists</span>
+                            <span class="tp-section__sub-title left-line right-line mb-25">DORALINE</span>
                             <h3 class="tp-section__title title-white mb-85 text-dark">
                                 @if (app()->getLocale() == 'ru')
                                     <b>

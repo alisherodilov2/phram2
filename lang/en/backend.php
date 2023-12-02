@@ -35,5 +35,6 @@ return [
     //vacancy
     'sendMessaga'=>"Leave a message",
     //menu 
-    'menuLink'=>'Menu Links'
+    'menuLink'=>'Menu Links',
+    'sek'=>'Monday - Friday 09:00 am - 05:00 Pmd'
 ];

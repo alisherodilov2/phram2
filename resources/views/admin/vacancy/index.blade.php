@@ -34,10 +34,7 @@
                                         <td>
                                             {{ $data->id }}
                                         </td>
-                                        <td style="width: 250px;">
-                                            <img src="{{ $data->getFirstMediaUrl() ?? '' }}" style="width: 100%;"
-                                                alt="">
-                                        </td>
+                                       
                                         <td>
                                             {{ $data->title }}
                                         </td>
@@ -47,14 +44,17 @@
                                         <td>
                                             {{ $data->title_en }}
                                         </td>
-                                       
+                                        <td style="width: 250px;">
+                                            <img src="{{ $data->getFirstMediaUrl() ?? '' }}" style="width: 100%;"
+                                                alt="">
+                                        </td>
                                         <td>
                                             <div class="d-flex">
                                                 <form action="{{ route('admin.vacancy.destroy', $data->id) }}"
                                                     method="POST">
                                                     @csrf @method('DELETE')<button class="btn btn-danger">Delete</button>
                                                 </form>
-                                                <button class="btn btn-info">Show</button>
+                                                <a href="{{route('admin.vacancy.show' , $data->id)}}" class="btn btn-info">Show</a>
                                             </div>
                                         </td>
                                     </tr>

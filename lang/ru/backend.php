@@ -36,6 +36,8 @@ return [
     //vacancy
     'sendMessaga'=>"<b>Оставить информацию</b>",
     //menu link
-    'menuLink'=>'Ссылки'
+    'menuLink'=>'<b>Ссылки</b>',
+    'sek'=>'Понедельник – пятница 09:00 – 17:00'
+
 
 ];

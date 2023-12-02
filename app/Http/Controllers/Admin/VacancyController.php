@@ -49,7 +49,8 @@ class VacancyController extends Controller
      */
     public function show(string $id)
     {
-        //
+       $vacancy =  Vacancy::find($id);
+        return view('admin.vacancy.show' , compact('vacancy'));
     }
 
     /**
