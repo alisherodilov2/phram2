@@ -57,12 +57,12 @@
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a></h5>
-                                            <a class="tp-btn-link" href="services-02.html">
+                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
                                                 {!! substr($item->description, 0, 101) !!}...
                                             </a>
                                             <br> <br>
                                             <div class="d-flex">
-                                                <a href="{{ route('frontend.products.show', $item->id) }}"
+                                                <a href="c"
                                                     class="research-item__btn">{{ __('backend.explore') }}</a>
 
                                             </div>
@@ -81,7 +81,7 @@
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a></h5>
-                                            <a class="tp-btn-link" href="services-02.html">
+                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
                                                 {!! substr($item->description_ru, 0, 101) !!}...
                                             </a>
                                             <br> <br>
@@ -106,7 +106,7 @@
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a></h5>
-                                            <a class="tp-btn-link" href="services-02.html">
+                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
                                                 {!! substr($item->description_en, 0, 101) !!}...
                                             </a>
                                             <br> <br>
