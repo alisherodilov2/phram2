@@ -62,7 +62,7 @@
                                             </a>
                                             <br> <br>
                                             <div class="d-flex">
-                                                <a href="c"
+                                                <a href="{{ route('frontend.products.show', $item->id) }}"
                                                     class="research-item__btn">{{ __('backend.explore') }}</a>
 
                                             </div>
