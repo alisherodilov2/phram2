@@ -180,16 +180,13 @@
                             </div>
                             <div class="tp-about__info-list mb-55">
                                 <ul>
-                                    <li><i class="fa-solid fa-check"></i>Extramural Funding</li>
-                                    <li><i class="fa-solid fa-check"></i>Bacteria Markers</li>
-                                    <li><i class="fa-solid fa-check"></i>Nam nec mi euismod euismod</li>
-                                    <li><i class="fa-solid fa-check"></i>In aliquet dui nec lectus</li>
+                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.servies')!!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.fast')!!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.suport')!!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.team')!!}</li>
                                 </ul>
                             </div>
-                            <div class="tp-about__btn">
-                                <a class="tp-btn" href="about.html">Our HIstory</a>
-                                <a class="tp-btn-second ml-25" href="about.html">About us</a>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

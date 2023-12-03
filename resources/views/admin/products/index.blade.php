@@ -58,7 +58,7 @@
                                                     method="POST">
                                                     @csrf @method('DELETE')<button class="btn btn-danger">Delete</button>
                                                 </form>
-                                                <button class="btn btn-info">Show</button>
+                                                <a href="{{route('admin.products.edit' , $data->id)}}" class="btn btn-info">Edit</a>
                                             </div>
                                         </td>
                                     </tr>

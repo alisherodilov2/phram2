@@ -37,7 +37,8 @@ class ProductsController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'link'=>'required'
+            'link'=>'required',
+            'products'=>'required',
         ]);
         $product = Products::create($request->all());
         $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
@@ -58,7 +59,8 @@ class ProductsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Products::find($id);
+        return view('admin.products.edit' , compact('data'));
     }
 
     /**
@@ -66,7 +68,24 @@ class ProductsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'title_ru' => 'required',
+            'title_en' => 'required',
+            'description' => 'required',
+            'description_ru' => 'required',
+            'description_en' => 'required',
+            'link'=>'required',
+           
+        ]);
+        $product = Products::find($id);
+        $product->update($request->all());
+        if($request->hasFile('products')){
+            $product->clearMediaCollection();
+            $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
+        }
+        return redirect()->route('admin.products.index');
+
     }
 
     /**

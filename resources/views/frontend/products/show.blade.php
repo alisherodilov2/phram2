@@ -16,12 +16,6 @@
                                 <h2 class="tp-breadcrumb__title">{{ $product->title }}</h2>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-12 col-md-12 col-12">
-                            <div class="tp-breadcrumb__link text-xl-end">
-                                <span>{{__('backend.createdAt')}} : <a
-                                        href="shop-details.html">{{ $product->created_at->format('d-m-Y') }}</a></span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

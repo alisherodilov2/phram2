@@ -50,6 +50,6 @@ return [
     'servies' => 'Yuqori sifatli hismat ko\'rsatish',
     'fast' => 'Tez ishlash',
     'suport' => '24/7 Opertorlik hismati',
-    'team' => 'Expertlar komandasi',
+    'team' => 'Yuqori malakali mutaxasislar',
     'footertext'=>'Fully meets international standards. A company engaged in the production of medicines and natural products made from medicinal plants growing in the mountains and valleys of Uzbekistan and Russia.'
 ];

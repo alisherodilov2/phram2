@@ -28,8 +28,8 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="header-time">
-                            <span><i class="fa-light fa-clock-ten"></i>{!!__('backend.sek')!!}</span>
-                       
+                            <span><i class="fa-light fa-clock-ten"></i>{!! __('backend.sek') !!}</span>
+
                         </div>
                     </div>
                 </div>
@@ -46,11 +46,22 @@
                                     <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a>
 
                                     </li>
-                                    <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a></li>
+                                    <li class="has-dropdown"><a href="#">{{ __('backend.contact') }}</a>
+                                        <ul class="sub-menu">
+                                            <li><a
+                                                    href="{{ route('frontend.contact.index') }}">{{ __('backend.contact') }}</a>
+                                            </li>
+                                            <li><a
+                                                    href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
 
                                     <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a>
-                                    <li><a href="{{ route('frontend.contact.index') }}">{{ __('backend.contact') }}</a>
-                                        
+
+
                                 </ul>
                                 </li>
 
