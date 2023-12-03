@@ -9,8 +9,9 @@
                                     src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
                                     alt="logo"></a>
                         </h4>
-                        <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo claritatem itamconse
-                            quat.Exerci tation ullamcorper.</p>
+                        <p>
+                            {!!__('backend.footertext')!!}
+                        </p>
                         <div class="footer-widget__social">
                             <a class="tp-f-youtube" href="https://www.youtube.com/@pertinuz"><i
                                     class="fa-brands fa-youtube"></i></a>

@@ -39,12 +39,21 @@ return [
     'sek'=>'Monday - Friday 09:00 am - 05:00 Pmd'
     ,
     //contact
-    'contactMain'=>'Biz bilan bog\'lanish',
+    'contactMain'=>'Contact us',
     'addres'=>'Adres',
     'number'=>'Phone number',
     //meesa
     'eName'=>'Enter your Name',
     'eMail'=>'Enter your mail',
     'eNumber'=>'Enter your number',
-    'message'=>'Message'
+    'message'=>'Message',
+    //why us
+    'whyus'=>'Why Choose us' ,
+    'servies'=>'High Quality <br> Services',
+    'fast'=>'Fast Working <br>Process',
+    'suport'=>'24/7 Customer <br> Support',
+    'team'=>'We have <br> Expert Team',
+    // foot
+    'footertext'=>"Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya"
+
 ];

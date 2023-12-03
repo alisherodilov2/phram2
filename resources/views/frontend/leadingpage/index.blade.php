@@ -349,8 +349,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="tp-section text-center">
-                            <span class="tp-section__sub-title left-line right-line mb-25">Our Specialists</span>
-                            <h3 class="tp-section__title title-white mb-85">Why Choose Us</h3>
+                            <h3 class="tp-section__title title-white mb-85">{{__('backend.whyus')}}</h3>
                         </div>
                     </div>
                 </div>
@@ -361,8 +360,7 @@
                                 <i class="flaticon-microscope"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">High Quality <br>Services</h4>
-                                <p>Nam eget dui vel quam sodales <br>semper quis porttitor tortor.</p>
+                                <h4 class="tp-choose__title mb-20">{!!__('backend.servies')!!}</h4>
                             </div>
                         </div>
                     </div>
@@ -372,8 +370,7 @@
                                 <i class="flaticon-thinking"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">Fast Working <br>Process</h4>
-                                <p>Nam eget dui vel quam sodales <br>semper quis porttitor tortor.</p>
+                                <h4 class="tp-choose__title mb-20">{!!__('backend.fast')!!}</h4>
                             </div>
                         </div>
                     </div>
@@ -383,8 +380,7 @@
                                 <i class="flaticon-24-hours-1"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">24/7 Customer <br> Support</h4>
-                                <p>Nam eget dui vel quam sodales <br>semper quis porttitor tortor.</p>
+                                <h4 class="tp-choose__title mb-20">{!!__('backend.suport')!!}</h4>
                             </div>
                         </div>
                     </div>
@@ -394,8 +390,7 @@
                                 <i class="flaticon-team"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">We have <br> Expert Team</h4>
-                                <p>Nam eget dui vel quam sodales <br>semper quis porttitor tortor.</p>
+                                <h4 class="tp-choose__title mb-20">{!!__('backend.team')!!}</h4>
                             </div>
                         </div>
                     </div>

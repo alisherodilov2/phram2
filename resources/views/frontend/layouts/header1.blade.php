@@ -28,8 +28,8 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="header-time">
-                            <span><i class="fa-light fa-clock-ten"></i>{{__('')}}</span>
-                            <span>Monday - Friday 09:00 am - 05:00 Pm</span>
+                            <span><i class="fa-light fa-clock-ten"></i>{!!__('backend.sek')!!}</span>
+                       
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
         <div class="row align-items-center">
             <div class="col-md-4 col-10">
                 <div class="tp-mob-logo">
-                    <a href="index.html"><img
+                    <a href="/"><img
                             src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
                             alt="logo"></a>
                 </div>
