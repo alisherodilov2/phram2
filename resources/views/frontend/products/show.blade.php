@@ -7,7 +7,7 @@
         <main>
             <!-- breadcrumb-area -->
             <section class="breadcrumb__area breadcrumb__overlay"
-                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;"
+                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;background-image:url('{{ $product->getFirstMediaUrl() }}')"
                 data-background="{{ $product->getFirstMediaUrl() ?? '' }}">
                 <div class="container">
                     <div class="row align-items-center">
@@ -47,7 +47,7 @@
         <main>
             <!-- breadcrumb-area -->
             <section class="breadcrumb__area breadcrumb__overlay"
-                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;"
+                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;background-image:url('{{ $product->getFirstMediaUrl() }}')"
                 data-background="{{ $product->getFirstMediaUrl() ?? '' }}">
                 <div class="container">
                     <div class="row align-items-center">
@@ -56,12 +56,7 @@
                                 <h2 class="tp-breadcrumb__title">{{ $product->title_ru }}</h2>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-12 col-md-12 col-12">
-                            <div class="tp-breadcrumb__link text-xl-end">
-                                <span>{{__('backend.createdAt')}} : <a
-                                        href="shop-details.html">{{ $product->created_at->format('d-m-Y') }}</a></span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -93,7 +88,7 @@
         <main>
             <!-- breadcrumb-area -->
             <section class="breadcrumb__area breadcrumb__overlay"
-                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;"
+                style="background-size: contain;background-repeat:no-repeat; background-attachment: fixed;background-position: center;background-image:url('{{ $product->getFirstMediaUrl() }}')"
                 data-background="{{ $product->getFirstMediaUrl() ?? '' }}">
                 <div class="container">
                     <div class="row align-items-center">
@@ -102,12 +97,7 @@
                                 <h2 class="tp-breadcrumb__title">{{ $product->title_en }}</h2>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-12 col-md-12 col-12">
-                            <div class="tp-breadcrumb__link text-xl-end">
-                                <span>{{__('backend.createdAt')}}: <a
-                                        href="shop-details.html">{{ $product->created_at->format('d-m-Y') }}</a></span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
