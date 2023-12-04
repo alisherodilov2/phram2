@@ -20,8 +20,7 @@
                                         <li><a
                                                 href="{{ route('frontend.contact.index') }}">{{ __('backend.contact') }}</a>
                                         </li>
-                                        <li><a
-                                                href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a>
+                                        <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -39,20 +38,35 @@
                                     <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                                         <!-- Example single danger button -->
                                         <div class="tp-cart-icon-area">
-        
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                <button type="button" class="btn btn-primary dropdown-toggle"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                                    {{app()->getLocale()}}
+                                                    @if (app()->getLocale() == 'uz')
+                                                        <b>Uzbek</b>
+                                                    @endif
+                                                    @if (app()->getLocale() == 'ru')
+                                                        <b>Русский</b>
+                                                    @endif
+                                                    @if (app()->getLocale() == 'en')
+                                                        <b>English</b>
+                                                    @endif
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'uz') }}">Uz</a></li>
-                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'ru') }}">Ru</a></li>
-                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'en') }}">En</a></li>
+                                                    <center>
+                                                        <li><a class="dropdown-item"
+                                                                href="{{ route('change.lang', 'uz') }}"><b>Uzbek</b></a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                                href="{{ route('change.lang', 'ru') }}"><b>Русский</b></a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                                href="{{ route('change.lang', 'en') }}"><b>English</b></a>
+                                                        </li>
+                                                    </center>
                                                 </ul>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                 </div>
                             </div>
@@ -107,5 +121,3 @@
 
     <div class="mobile-menu"></div>
 </div>
-
-
