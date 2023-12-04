@@ -42,7 +42,7 @@
     @yield('content')
     <!-- main-area-end -->
     <!-- footer-area -->
-    <a href="#" class="btn btn-secondary fixed-btn">^</a>
+    <a href="#" class="btn btn-primary fixed-btn">^</a>
     @include('frontend.layouts.fotter')
     <!-- footer-area-end -->
 
