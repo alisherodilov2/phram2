@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bannerscroll d-none d-xl-block">
+            <div class="bannerscroll d-none d-xl-block" style="margin-top: -45px;">
                 <div class="banner-scroll-btn">
                     <a class="bannerscroll-icon" href="#tp-about-scroll"><i class="fa-light fa-computer-mouse"></i>
                         <span>Scrool Down</span></a>
