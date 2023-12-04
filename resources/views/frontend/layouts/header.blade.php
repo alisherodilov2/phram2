@@ -34,32 +34,25 @@
                 <div class="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
                     <div class="tp-bt-btn-banner ">
                         <div class="header-cart-order d-flex align-items-center justify-content-end">
-                            <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                                <div class="tp-cart-icon-area ">
-                                    <i class="fa-solid fa-globe"></i>
-                                    <div class="tpcarticon">
-                                        <ul>
-                                            <li>
-                                                <div class="tpcarticon__total-price">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('change.lang', 'uz') }}">UZ</a>
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tpcarticon__checkout-price">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('change.lang', 'ru') }}">RU</a>
-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tpcarticon__checkout-price">
-                                                    <a class="dropdown-item"
-                                                        href="{{ route('change.lang', 'en') }}">EN</a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                            <div class="col-lg-5">
+                                <div class="header-cart-order d-flex align-items-center justify-content-end">
+                                    <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
+                                        <!-- Example single danger button -->
+                                        <div class="tp-cart-icon-area">
+        
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {{app()->getLocale()}}
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'uz') }}">Uz</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'ru') }}">Ru</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('change.lang', 'en') }}">En</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>

@@ -498,7 +498,7 @@
                         @foreach (App\Models\Partners::all() as $partner)
                             <div class="swiper-slide">
                                 <a href="{{ $partner->link }}"><img src="{{ $partner->getFirstMediaUrl() }}"
-                                        alt="brand" style="width: 25    0px;"></a>
+                                        alt="brand" style="width: 250px;"></a>
                             </div>
                         @endforeach
                     </div>

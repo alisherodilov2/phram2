@@ -40,12 +40,8 @@
                         <div class="main-menu main-menu-second">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="/">{{ __('backend.home') }}</a>
-
-                                    </li>
-                                    <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a>
-
-                                    </li>
+                                    <li><a href="/">{{ __('backend.home') }}</a></li>
+                                    <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a></li>
                                     <li class="has-dropdown"><a href="#">{{ __('backend.contact') }}</a>
                                         <ul class="sub-menu">
                                             <li><a
@@ -57,14 +53,7 @@
 
                                         </ul>
                                     </li>
-
-
-                                    <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a>
-
-
-                                </ul>
-                                </li>
-
+                                    <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -72,42 +61,23 @@
                     <div class="col-lg-5">
                         <div class="header-cart-order d-flex align-items-center justify-content-end">
                             <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                                <div class="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
-                                    <div class="tp-bt-btn-banner">
-                                        <div class="header-cart-order d-flex align-items-center justify-content-end">
-                                            <div
-                                                class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                                                <div class="tp-cart-icon-area">
-                                                    <i class="fa-solid fa-globe"></i>
-                                                    <div class="tpcarticon">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="tpcarticon__total-price">
-                                                                    <a class="dropdown-item"
-                                                                        href="{{ route('change.lang', 'uz') }}">UZ</a>
+                                <!-- Example single danger button -->
+                                <div class="tp-cart-icon-area">
 
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="tpcarticon__checkout-price">
-                                                                    <a class="dropdown-item"
-                                                                        href="{{ route('change.lang', 'ru') }}">RU</a>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-outline-secondary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{app()->getLocale()}}
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="{{ route('change.lang', 'uz') }}">Uz</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('change.lang', 'ru') }}">Ru</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('change.lang', 'en') }}">En</a></li>
 
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="tpcarticon__checkout-price">
-                                                                    <a class="dropdown-item"
-                                                                        href="{{ route('change.lang', 'en') }}">EN</a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </ul>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>

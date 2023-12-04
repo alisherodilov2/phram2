@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -24,6 +25,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
+<style>
+    .fixed-btn {
+        position: fixed;
+        top: 90%;
+        /* Adjust the top position as needed */
+        right: 20px;
+        /* Adjust the right position as needed */
+        font-weight: 700;
+    }
+</style>
 
 <body>
     @yield('header')
@@ -31,6 +42,7 @@
     @yield('content')
     <!-- main-area-end -->
     <!-- footer-area -->
+    <a href="#" class="btn btn-secondary fixed-btn">^</a>
     @include('frontend.layouts.fotter')
     <!-- footer-area-end -->
 
