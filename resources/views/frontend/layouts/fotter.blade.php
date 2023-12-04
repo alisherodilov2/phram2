@@ -21,6 +21,7 @@
                                     class="fa-brands fa-telegram"></i></a>
                             <a class="tp-f-fb" href="https://www.instagram.com/doraline_companyy"><i
                                     class="fa-brands fa-instagram"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -32,7 +33,10 @@
                                 <li><a href="contact.html">{{ __('backend.contact') }}</a></li>
                                 <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a></li>
                                 <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a></li>
-                                <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a>
+                                <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a></li>
+                                <li>
+                                <button onclick="(()=>{window.scrollTo({ top: 0, behavior: 'smooth' });})">top</button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -53,9 +57,7 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
-    
 </footer>
