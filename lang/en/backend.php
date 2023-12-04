@@ -54,6 +54,6 @@ return [
     'suport'=>'24/7 Customer <br> Support',
     'team'=>'We have <br> Expert Team',
     // foot
-    'footertext'=>"Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya"
+    'footertext'=>"Fully meets international standards. A company engaged in the production of medicines and natural products made from medicinal plants growing in the mountains and valleys of Uzbekistan and Russia."
 
 ];
