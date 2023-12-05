@@ -74,6 +74,7 @@
         </section>
         <!-- banner-area-end -->
         <!-- services-area -->
+       
         <section class="services-area pt-95 pb-90 grey-bg mt-60 fix" data-background="assets/img/shape/shape-bg-01.png">
             <div class="container">
                 <div class="row align-items-center">
@@ -96,9 +97,11 @@
                             @foreach (App\Models\Projects::all() as $project)
                                 <div class="swiper-slide">
                                     @if (app()->getLocale() == 'uz')
-                                        <div class="services-item mb-40">
-                                            <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:scale-down;width:100%;">
+                                        <div class="services-item mb-40" >
+                                            <div style="position: relative;height:300px;">
+                                                <img src="{{ $project->getFirstMediaUrl() }}" alt=""
+                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                            </div>
                                             <div class="services-item__content mt-4">
                                                 <h4 class="services-item__tp-title mb-30"><a
                                                         href="{{ $project->link }}">{{ $project->title }}</a></h4>
@@ -112,8 +115,10 @@
                                     @endif
                                     @if (app()->getLocale() == 'ru')
                                         <div class="services-item mb-40">
-                                            <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:scale-down;width:100%;">
+                                            <div style="position: relative;height:300px;">
+                                                <img src="{{ $project->getFirstMediaUrl() }}" alt=""
+                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                            </div>
                                             <div class="services-item__content mt-4">
                                                 <h4 class="services-item__tp-title mb-30"><a
                                                         href="{{ $project->link }}">{{ $project->title_ru }}</a></h4>
@@ -127,8 +132,10 @@
                                     @endif
                                     @if (app()->getLocale() == 'en')
                                         <div class="services-item mb-40">
-                                            <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:scale-down;width:100%;">
+                                            <div style="position: relative;height:300px;">
+                                                <img src="{{ $project->getFirstMediaUrl() }}" alt=""
+                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                            </div>  
                                             <div class="services-item__content mt-4">
                                                 <h4 class="services-item__tp-title mb-30"><a
                                                         href="{{ $project->link }}">{{ $project->title_en }}</a></h4>
@@ -403,13 +410,13 @@
                 <div class="row">
                     <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
                         <div class="appoinment-thumb">
-                            <img src="{{ asset('img/appoinment-01.jpg') }}" alt="appoinment-img">
+                            <img src="{{ asset('img/photos/contact_'.app()->getLocale().'.png') }}" alt="appoinment-img">
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
                         <div class="visitor-info">
                             <h4 class="appoinment-title mb-25"><i
-                                    class="fa-light fa-file-signature"></i>{{ __('backend.contact') }}
+                                    class="fa-light fa-file-signature"></i>{!! __('backend.contact')!!}
                             </h4>
                             <div class="visitor-form">
                                 <form action="{{ route('admin.contact.store') }}" method="POST">
@@ -417,17 +424,17 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="text" name="name" placeholder="Ism">
+                                                <input type="text" name="name" placeholder="{{__('backend.name')}}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="number" name="number" placeholder="Telefon Raqami">
+                                                <input type="number" name="number" placeholder="{{__('backend.number')}}">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="visitor-form__input">
-                                                <textarea placeholder="Xabar " name="description"></textarea>
+                                                <textarea placeholder="{{__('backend.message')}}" name="description"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-12">

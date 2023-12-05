@@ -42,15 +42,17 @@
                                 <ul>
                                     <li><a href="/">{{ __('backend.home') }}</a></li>
                                     <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a></li>
-                                    <li class="has-dropdown"><a href="#">{{ __('backend.contact') }}</a>
+                                    <li class="has-dropdown"><a
+                                            href="#">{{ strip_tags(__('backend.contact')) }}</a>
                                         <ul class="sub-menu">
                                             <li><a
-                                                    href="{{ route('frontend.contact.index') }}">{{ __('backend.contact') }}</a>
+                                                    href="{{ route('frontend.contact.index') }}">{!! __('backend.contact') !!}</a>
                                             </li>
                                             <li><a
                                                     href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a>
                                             </li>
-
+                                            <li><a href="{{ route('frontend.about') }}">{{ __('backend.about') }}</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a></li>
@@ -90,9 +92,9 @@
                                                 </li>
                                             </center>
                                         </ul>
-                                    </div>  
+                                    </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>

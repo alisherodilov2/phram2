@@ -58,7 +58,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a></h5>
                                             <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description, 0, 100) !!}...
+                                                {!! substr($item->description, 0, 250) !!}...
                                             </a>
                                             <br> <br>
                                             <div class="d-flex">
@@ -82,7 +82,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a></h5>
                                             <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description_ru, 0, 100) !!}...
+                                                {!! substr($item->description_ru, 0, 250) !!}...
                                             </a>
                                             <br> <br>
                                             <div class="d-flex">
@@ -107,7 +107,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a></h5>
                                             <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description_en, 0, 100) !!}...
+                                                {!! substr($item->description_en, 0, 250) !!}...
                                             </a>
                                             <br> <br>
                                             <div class="d-flex">

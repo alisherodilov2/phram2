@@ -36,6 +36,8 @@ Route::group(['middleware' => 'language'], function () {
     Route::post('resume/storet/{id}', [App\Http\Controllers\Frontend\ResumeController::class, 'store'])->name("resume.store");
     Route::get('contact', [App\Http\Controllers\Frontend\ContactController::class, 'index'])->name('frontend.contact.index');
     Route::post('contact/create', [App\Http\Controllers\Frontend\ContactController::class, 'create'])->name('frontend.contact.create');
+    //about
+    Route::get('about', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.about');
 
 });
 Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])->name("login");
