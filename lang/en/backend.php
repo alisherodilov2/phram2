@@ -1,7 +1,7 @@
 <?php
 return [
     //welcome page
-    'welcome' => 'Welcome to DOROLINE',
+    'welcome' => 'Welcome to DORALINE',
     'maintext' => 'We always care about <br> your  health',
     'mainsubtext' => "DORA Line The company has been operating since 2014. During this time, he presented more <br> than 34 products to consumers.",
     'satic' => '100% Customer Satisfaction',

@@ -15,7 +15,7 @@
                             <p>{!! __('backend.mainsubtext') !!}</p>
                             <div class="banner__btn">
                                 <a class="tp-btn" href="/products">{{ __('backend.ProductsMain') }}</a>
-                                <a class="tp-btn-second ml-25" href="about.html">{{ __('backend.aboutus') }}</a>
+                                <a class="tp-btn-second ml-25" href="/about">{{ __('backend.aboutus') }}</a>
                             </div>
                         </div>
                         <div class="banner__box-item">

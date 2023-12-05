@@ -30,13 +30,11 @@
                         <h4 class="footer-widget__title mb-20">{!! __('backend.menuLink') !!}</h4>
                         <div class="footer-widget__links">
                             <ul>
-                                <li><a href="contact.html">{{ __('backend.contact') }}</a></li>
+                                <li><a href="{{route('frontend.contact.index')}}">{{strip_tags( __('backend.contact')) }}</a></li>
                                 <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a></li>
                                 <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a></li>
                                 <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a></li>
-                                <li>
-                                <button onclick="(()=>{window.scrollTo({ top: 0, behavior: 'smooth' });})">top</button>
-                                </li>
+                                <li><a href="{{ route('frontend.about') }}">{{ __('backend.about') }}</a></li>
                             </ul>
                         </div>
                     </div>
