@@ -482,7 +482,7 @@
                                         <h4 class="tp-team__title mb-15"><a
                                                 href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title }}</a>
                                         </h4>
-                                        <p> {!! substr($product->description_en, 0, 130) !!}...</p>
+                                        <p> {!! substr($product->description_en, 0, 250) !!}...</p>
                                     </div>
                                 </div>
                             </div>
