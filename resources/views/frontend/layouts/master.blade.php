@@ -33,6 +33,7 @@
         right: 20px;
         /* Adjust the right position as needed */
         font-weight: 700;
+        z-index: 100;
     }
 </style>
 

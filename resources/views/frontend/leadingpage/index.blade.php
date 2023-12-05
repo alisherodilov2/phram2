@@ -3,6 +3,27 @@
     @include('frontend.layouts.header')
 @endsection
 @section('content')
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: none;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: none;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: none;
+        }
+    </style>
     <main>
         <!-- banner-area -->
         <section class="banner-area p-relative pt-90">
@@ -74,7 +95,7 @@
         </section>
         <!-- banner-area-end -->
         <!-- services-area -->
-       
+
         <section class="services-area pt-95 pb-90 grey-bg mt-60 fix" data-background="assets/img/shape/shape-bg-01.png">
             <div class="container">
                 <div class="row align-items-center">
@@ -97,19 +118,23 @@
                             @foreach (App\Models\Projects::all() as $project)
                                 <div class="swiper-slide">
                                     @if (app()->getLocale() == 'uz')
-                                        <div class="services-item mb-40" >
+                                        <div class="services-item mb-40">
                                             <div style="position: relative;height:300px;">
                                                 <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                                    style="object-fit:cover;width:100%;position:absolute;height:100%">
                                             </div>
-                                            <div class="services-item__content mt-4">
-                                                <h4 class="services-item__tp-title mb-30"><a
-                                                        href="{{ $project->link }}">{{ $project->title }}</a></h4>
-                                                <p>{{ $project->description }}</p>
-                                                <div class="services-item__btn">
-                                                    <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
-                                                        More</a>
+                                            <div class="services-item__content mt-4"
+                                                style="overflow-y: auto;height: 300px;">
+                                                <h4 class="services-item__tp-title mb-30">
+                                                    <a href="{{ $project->link }}">{{ $project->title }}</a>
+                                                </h4>
+                                                <div class="text-block">
+                                                    <p>{{ $project->description }}</p>
                                                 </div>
+                                            </div>
+                                            <div class="services-item__btn mt-3">
+                                                <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
+                                                    More</a>
                                             </div>
                                         </div>
                                     @endif
@@ -117,16 +142,20 @@
                                         <div class="services-item mb-40">
                                             <div style="position: relative;height:300px;">
                                                 <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                                    style="object-fit:cover;width:100%;position:absolute;height:100%">
                                             </div>
-                                            <div class="services-item__content mt-4">
-                                                <h4 class="services-item__tp-title mb-30"><a
-                                                        href="{{ $project->link }}">{{ $project->title_ru }}</a></h4>
-                                                <p>{{ $project->description_ru }}</p>
-                                                <div class="services-item__btn">
-                                                    <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
-                                                        More</a>
+                                            <div class="services-item__content mt-4"
+                                                style="overflow-y: auto;height: 300px;">
+                                                <h4 class="services-item__tp-title mb-30">
+                                                    <a href="{{ $project->link }}">{{ $project->title_ru }}</a>
+                                                </h4>
+                                                <div class="text-block">
+                                                    <p>{{ $project->description_ru }}</p>
                                                 </div>
+                                            </div>
+                                            <div class="services-item__btn mt-3">
+                                                <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
+                                                    More</a>
                                             </div>
                                         </div>
                                     @endif
@@ -134,16 +163,20 @@
                                         <div class="services-item mb-40">
                                             <div style="position: relative;height:300px;">
                                                 <img src="{{ $project->getFirstMediaUrl() }}" alt=""
-                                                style="object-fit:cover;width:100%;position:absolute;height:100%">
-                                            </div>  
-                                            <div class="services-item__content mt-4">
-                                                <h4 class="services-item__tp-title mb-30"><a
-                                                        href="{{ $project->link }}">{{ $project->title_en }}</a></h4>
-                                                <p>{{ $project->description_en }}</p>
-                                                <div class="services-item__btn">
-                                                    <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
-                                                        More</a>
+                                                    style="object-fit:cover;width:100%;position:absolute;height:100%">
+                                            </div>
+                                            <div class="services-item__content mt-4"
+                                                style="overflow-y: auto;height: 300px;">
+                                                <h4 class="services-item__tp-title mb-30">
+                                                    <a href="{{ $project->link }}">{{ $project->title_en }}</a>
+                                                </h4>
+                                                <div class="text-block">
+                                                    <p>{{ $project->description_en }}</p>
                                                 </div>
+                                            </div>
+                                            <div class="services-item__btn mt-3">
+                                                <a class="btn-hexa sky-hexa" href="{{ $project->link }}"><i></i>Read
+                                                    More</a>
                                             </div>
                                         </div>
                                     @endif
@@ -187,13 +220,13 @@
                             </div>
                             <div class="tp-about__info-list mb-55">
                                 <ul>
-                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.servies')!!}</li>
-                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.fast')!!}</li>
-                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.suport')!!}</li>
-                                    <li><i class="fa-solid fa-check"></i>{!!__('backend.team')!!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!! __('backend.servies') !!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!! __('backend.fast') !!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!! __('backend.suport') !!}</li>
+                                    <li><i class="fa-solid fa-check"></i>{!! __('backend.team') !!}</li>
                                 </ul>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -353,7 +386,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="tp-section text-center">
-                            <h3 class="tp-section__title title-white mb-85">{{__('backend.whyus')}}</h3>
+                            <h3 class="tp-section__title title-white mb-85">{{ __('backend.whyus') }}</h3>
                         </div>
                     </div>
                 </div>
@@ -364,7 +397,7 @@
                                 <i class="flaticon-microscope"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">{!!__('backend.servies')!!}</h4>
+                                <h4 class="tp-choose__title mb-20">{!! __('backend.servies') !!}</h4>
                             </div>
                         </div>
                     </div>
@@ -374,7 +407,7 @@
                                 <i class="flaticon-thinking"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">{!!__('backend.fast')!!}</h4>
+                                <h4 class="tp-choose__title mb-20">{!! __('backend.fast') !!}</h4>
                             </div>
                         </div>
                     </div>
@@ -384,7 +417,7 @@
                                 <i class="flaticon-24-hours-1"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">{!!__('backend.suport')!!}</h4>
+                                <h4 class="tp-choose__title mb-20">{!! __('backend.suport') !!}</h4>
                             </div>
                         </div>
                     </div>
@@ -394,7 +427,7 @@
                                 <i class="flaticon-team"></i>
                             </div>
                             <div class="tp-choose__content">
-                                <h4 class="tp-choose__title mb-20">{!!__('backend.team')!!}</h4>
+                                <h4 class="tp-choose__title mb-20">{!! __('backend.team') !!}</h4>
                             </div>
                         </div>
                     </div>
@@ -410,13 +443,14 @@
                 <div class="row">
                     <div class="col-xxl-6 col-xl-5 col-lg-12 col-md-12 p-0">
                         <div class="appoinment-thumb">
-                            <img src="{{ asset('img/photos/contact_'.app()->getLocale().'.png') }}" alt="appoinment-img">
+                            <img src="{{ asset('img/photos/contact_' . app()->getLocale() . '.png') }}"
+                                alt="appoinment-img">
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-7 col-lg-12 col-md-12 p-0">
                         <div class="visitor-info">
                             <h4 class="appoinment-title mb-25"><i
-                                    class="fa-light fa-file-signature"></i>{!! __('backend.contact')!!}
+                                    class="fa-light fa-file-signature"></i>{!! __('backend.contact') !!}
                             </h4>
                             <div class="visitor-form">
                                 <form action="{{ route('admin.contact.store') }}" method="POST">
@@ -424,17 +458,19 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="text" name="name" placeholder="{{__('backend.name')}}">
+                                                <input type="text" name="name"
+                                                    placeholder="{{ __('backend.name') }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="visitor-form__input">
-                                                <input type="number" name="number" placeholder="{{__('backend.number')}}">
+                                                <input type="number" name="number"
+                                                    placeholder="{{ __('backend.number') }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="visitor-form__input">
-                                                <textarea placeholder="{{__('backend.message')}}" name="description"></textarea>
+                                                <textarea placeholder="{{ __('backend.message') }}" name="description"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-12">

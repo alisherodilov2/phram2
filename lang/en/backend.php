@@ -3,7 +3,7 @@ return [
     //welcome page
     'welcome' => 'Welcome to DORALINE',
     'maintext' => 'We always care about <br> your  health',
-    'mainsubtext' => "DORA Line The company has been operating since 2014. During this time, he presented more <br> than 34 products to consumers.",
+    'mainsubtext' => "The DORALINE company has been operating since 2014. During this time, the company provided more than 34 types of drugs to consumers",
     'satic' => '100% Customer Satisfaction',
     'help' => 'Help is Our Mission',
     'products' => '100% Quality Products',
