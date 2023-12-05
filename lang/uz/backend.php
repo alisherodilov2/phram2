@@ -105,4 +105,7 @@ return [
      Ushbu ustuvorliklarga rioya qilish orqali biz kompaniyaning bozordan yuqori o'sishini qo'llab-quvvatlaymiz va rentabellikni ta'minlaymiz
      investorlar va innovatsiyalarimiz tufayli bemorlar uchun mahsulot va xizmatlar sifatini yaxshilash
      qarorlar."
+     ,
+     'infofotter'=>" Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy",
+     'doraline'=>'"DORA LINE" MCHJ'
 ];

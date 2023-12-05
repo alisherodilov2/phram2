@@ -108,6 +108,10 @@ return [
      By following these priorities, we support the company's growth above the market and ensure profitability
      investors and improve the quality of products and services for patients thanks to our innovative
      decisions.
-    "
+    ",
+    'infofotter'=>"Tashkent city, Yunusabad district, Niyozbek road street, 1 house",
+    'doraline'=>'"DORA LINE" LLC'
+
+
     
 ];

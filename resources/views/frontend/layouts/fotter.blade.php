@@ -46,9 +46,9 @@
                         <h4 class="footer-widget__title mb-20">{{__('backend.contact')}}</h4>
                         <div class="footer-widget__info">
                             <ul>
-                                <li><a href="#">"DORA LINE" MCHJ </a></li>
+                                <li><a href="#">{{__('backend.doraline')}}</a></li>
                                 <li>
-                                    Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy
+                                   {{__('backend.infofotter')}}
                                 </li>
                                 <li><a href="tel:+9159008855">(+998)94 211 70 10 </a></li>
                                 <li><a href="mailto:doraline_comapny@mail.ru">doraline_comapny@mail.ru</a></li>
