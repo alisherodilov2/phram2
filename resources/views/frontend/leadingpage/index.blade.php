@@ -112,13 +112,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="services-slider  wow fadeInUp" data-wow-delay=".3s">
+                <div class="services-slider  wow fadeInUp" data-wow-delay=".2s">
                     <div class="swiper-container service-active">
                         <div class="swiper-wrapper">
                             @foreach (App\Models\Projects::all() as $project)
                                 <div class="swiper-slide">
                                     @if (app()->getLocale() == 'uz')
-                                        <div class="services-item mb-40">
+                                        <div class="services-item mb-70">
                                             <div style="position: relative;height:300px;">
                                                 <img src="{{ $project->getFirstMediaUrl() }}" alt=""
                                                     style="object-fit:cover;width:100%;position:absolute;height:100%">
