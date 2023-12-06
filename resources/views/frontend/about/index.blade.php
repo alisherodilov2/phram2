@@ -62,7 +62,7 @@
                                     <li><i class="fa-solid fa-check"></i>{!! __('backend.team') !!}</li>
                                 </ul>
                             </div>
-                            <div class="about-content__btn"><a href="about.html" class="tp-btn">About us</a></div>
+                            
                         </div>
                     </div>
                 </div>
