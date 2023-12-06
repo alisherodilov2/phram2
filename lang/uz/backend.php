@@ -107,5 +107,6 @@ return [
      qarorlar."
      ,
      'infofotter'=>" Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy",
-     'doraline'=>'"DORA LINE" MCHJ'
+     'doraline'=>'"DORA LINE" MCHJ',
+     'partners'=>'Bizni hamkorlar'
 ];

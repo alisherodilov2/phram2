@@ -110,7 +110,8 @@ return [
      decisions.
     ",
     'infofotter'=>"Tashkent city, Yunusabad district, Niyozbek road street, 1 house",
-    'doraline'=>'"DORA LINE" LLC'
+    'doraline'=>'"DORA LINE" LLC',
+    'partners'=>'Our partners'
 
 
     

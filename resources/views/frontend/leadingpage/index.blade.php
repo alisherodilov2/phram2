@@ -536,6 +536,16 @@
         <!-- brand-area -->
         <div class="brand-area pt-130 pb-130">
             <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 col-md-12 col-12">
+                       <center>
+                        <div class="tp-section">
+                            <p></p>
+                            <h3 class="tp-section__title mb-75">{{ __('backend.partners') }}</h3>
+                        </div>
+                       </center>
+                    </div>
+                </div>
                 <div class="swiper-container brand-active">
                     <div class="swiper-wrapper brand-items">
                         @foreach (App\Models\Partners::all() as $partner)
