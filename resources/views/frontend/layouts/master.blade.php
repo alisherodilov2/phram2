@@ -44,10 +44,6 @@
     <!-- main-area-end -->
     <!-- footer-area -->
     <a href="#" class="btn btn-primary fixed-btn">^</a>
-    @include('frontend.layouts.fotter')
-    <!-- footer-area-end -->
-
-    <!-- JS here -->
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/waypoints.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -62,6 +58,11 @@
     <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
     <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    @include('frontend.layouts.fotter')
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+    
 </body>
 
 </html>
