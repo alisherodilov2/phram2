@@ -4,16 +4,18 @@
 @endsection
 @section('content')
     <main>
-        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"   style="background-size: cover;background-repeat:no-repeat; background-attachment: fixed;" data-background="{{ asset('img/product.jpg') }}">
+        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
+            style="background-size: cover;background-repeat:no-repeat; background-attachment: fixed;"
+            data-background="{{ asset('img/product.jpg') }}">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-12 col-md-12 col-12">
                         <div class="tp-breadcrumb">
                             <h2 class="tp-breadcrumb__title">
-                                @if(app()->getLocale() == "ru")
-                                <b>{{ __('backend.products') }}</b>
+                                @if (app()->getLocale() == 'ru')
+                                    <b>{{ __('backend.products') }}</b>
                                 @else
-                                {{ __('backend.products') }}
+                                    {{ __('backend.products') }}
                                 @endif
                             </h2>
                         </div>
@@ -56,10 +58,9 @@
                                     <div class="services-thumb-box__text-area d-flex align-items-center">
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a></h5>
-                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description, 0, 250) !!}...
-                                            </a>
+                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a>
+                                            </h5>
+                                            {!! substr($item->description, 0, 250) !!}...
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -75,15 +76,15 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="services-thumb-box mb-30 wow fadeInLeft" data-wow-delay=".3s">
                                     <div class="services-thumb-box__thumb fix fix">
-                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;" alt="services-thumb">
+                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;"
+                                            alt="services-thumb">
                                     </div>
                                     <div class="services-thumb-box__text-area d-flex align-items-center">
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a></h5>
-                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description_ru, 0, 250) !!}...
-                                            </a>
+                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a>
+                                            </h5>
+                                            {!! substr($item->description, 0, 250) !!}...
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -105,10 +106,9 @@
                                     <div class="services-thumb-box__text-area d-flex align-items-center">
                                         <div class="services-thumb-box__content">
                                             <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a></h5>
-                                            <a class="tp-btn-link" href="{{ route('frontend.products.show', $item->id) }}">
-                                                {!! substr($item->description_en, 0, 250) !!}...
-                                            </a>
+                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a>
+                                            </h5>
+                                            {!! substr($item->description, 0, 250) !!}...
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
