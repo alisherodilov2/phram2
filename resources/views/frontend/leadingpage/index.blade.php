@@ -488,7 +488,7 @@
             </div>
         </section>
         <!-- appoinment-area-end -->
-        <!-- team-area -->
+        {{-- <!-- team-area -->
         <section class="team-area grey-bg pt-120 pb-80" data-background="assets/img/shape/shape-bg-01.png">
             <div class="container">
                 <div class="row align-items-center">
@@ -526,14 +526,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- team-area-end -->
-
-        <!-- testimonial-area -->
-
-        <!-- testimonial-area-end -->
-
-        <!-- brand-area -->
+        </section> --}}
+       
         <div class="brand-area pt-130 pb-130">
             <div class="container">
                 <div class="row align-items-center">
