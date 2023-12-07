@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
+
 class BlogController extends Controller
 {
     /**
@@ -12,9 +13,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        
-       $blogs  = Blog::all();
-       return view('admin.blogs.index' , compact('blogs'));
+
+        $blogs = Blog::all();
+        return view('admin.blogs.index', compact('blogs'));
     }
 
     /**
@@ -37,9 +38,9 @@ class BlogController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'mainPhoto'=>'required'
+            'mainmainPhoto' => 'required'
         ]);
-        $partner =  Blog::create($request->all());
+        $partner = Blog::create($request->all());
         $partner->addMediaFromRequest('mainPhoto')->usingName($partner->id)->toMediaCollection();
         return redirect()->route('admin.blogs.index');
     }
@@ -57,7 +58,8 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Blog::find($id);
+        return view('admin.blogs.edit', compact('data'));
     }
 
     /**
@@ -65,7 +67,21 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'title_ru' => 'required',
+            'title_en' => 'required',
+            'description' => 'required',
+            'description_ru' => 'required',
+            'description_en' => 'required',
+        ]);
+        $blog = Blog::find($id);
+        $blog->update($request->all());
+        if ($request->hasFile('mainPhoto')) {
+            $blog->clearMediaCollection();
+            $blog->addMediaFromRequest('mainPhoto')->usingName($blog->id)->toMediaCollection();
+        }
+        return redirect()->route('admin.blogs.index');
     }
 
     /**
@@ -75,6 +91,6 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $blog->delete();
-       return back();
+        return back();
     }
 }
