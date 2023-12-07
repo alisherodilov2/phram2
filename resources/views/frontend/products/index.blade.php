@@ -4,72 +4,13 @@
 @endsection
 @section('content')
     <main>
-
-        <!-- breadcrumb-area -->
-        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
-            style="background-size: cover;background-repeat:no-repeat; background-attachment: fixed;"
-            data-background="{{ asset('img/product.jpg') }}" data-background="{{ asset('img/product.jpg') }}">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="tp-breadcrumb">
-                            <h2 class="tp-breadcrumb__title">
-                                @if (app()->getLocale() == 'ru')
-                                    <b>{{ __('backend.products') }}</b>
-                                @else
-                                    {{ __('backend.products') }}
-                                @endif
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="tp-breadcrumb__link d-flex">
-                            <span>DORALINE: <a href="research.html"> </a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- breadcrumb-area-end -->
-
-        <!-- research-area -->
-        <section class="research-area pt-130 pb-130">
-            <div class="container">
-                <div class="row">
-                    @foreach ($products as $item)
-                        @if (app()->getLocale() == 'uz')
-                            <div class="col-lg-4 col-md-6">
-                                <div class="research-item mb-50 wow fadeInUp" data-wow-delay=".2s">
-                                    <div class="research-item__thum fix mb-20">
-                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;" alt="research-thumb">
-                                    </div>
-                                    <div class="research-item__content">
-                                        
-                                        <h4 class="research-item__title mb-20"><a
-                                                href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a>
-                                        </h4>
-                                        <p> {!! substr($item->description, 0, 250) !!}...</p>
-                                            <a href="{{ route('frontend.products.show', $item->id) }}"
-                                                class="research-item__btn">{{ __('backend.explore') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-        </section>
-        <!-- research-area-end -->
-
-    </main>
-    {{-- <main>
         <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"   style="background-size: cover;background-repeat:no-repeat; background-attachment: fixed;" data-background="{{ asset('img/product.jpg') }}">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-12 col-md-12 col-12">
                         <div class="tp-breadcrumb">
                             <h2 class="tp-breadcrumb__title">
-                                @if (app()->getLocale() == 'ru')
+                                @if(app()->getLocale() == "ru")
                                 <b>{{ __('backend.products') }}</b>
                                 @else
                                 {{ __('backend.products') }}
@@ -182,5 +123,5 @@
                 </div>
             </div>
         </section>
-    </main> --}}
+    </main>
 @endsection
