@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="footer-widget footer-col-3 mb-50 wow fadeInUp" data-wow-delay=".6s">
-                        <h4 class="footer-widget__title mb-20">{{__('backend.contact')}}</h4>
+                        <h4 class="footer-widget__title mb-20">{!!__('backend.contact')!!}</h4>
                         <div class="footer-widget__info">
                             <ul>
                                 <li><a href="#">{{__('backend.doraline')}}</a></li>
