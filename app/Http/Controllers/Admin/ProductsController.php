@@ -38,9 +38,10 @@ class ProductsController extends Controller
             'description_ru' => 'required',
             'description_en' => 'required',
             'link' => 'required',
-            'products' => 'required|file|mimes:jpeg,png,pdf|max:2048',
+            'products' => 'required|file|mimes:jpeg,png,pdf',
         ]);
         $product = Products::create($request->all());
+       
         try {
             //code...
             $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
