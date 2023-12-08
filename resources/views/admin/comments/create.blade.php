@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Partner Create</h2>
+                <h2>Partner {{__('backend.comment')}}</h2>
                 <form action="{{ route('admin.comment.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card p-3">

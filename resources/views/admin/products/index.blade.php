@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>Product Table</h1>
+                <h1>{{ __('backend.products') }} </h1>
                 <div class="card">
                     <div class="card-body">
                         <a href="{{ route('admin.products.create') }}" class="btn btn-success">Create Product</a>
@@ -47,10 +47,11 @@
                                             {{ $data->title_en }}
                                         </td>
                                         <td>
-                                            {{$data->link}}
+                                            {{ $data->link }}
                                         </td>
                                         <td>
-                                            <img src="{{$data->getFirstMediaUrl() ?? ''}}" alt="" style="width: 250px">
+                                            <img src="{{ $data->getFirstMediaUrl() ?? '' }}" alt=""
+                                                style="width: 250px">
                                         </td>
                                         <td>
                                             <div class="d-flex">
@@ -58,13 +59,17 @@
                                                     method="POST">
                                                     @csrf @method('DELETE')<button class="btn btn-danger">Delete</button>
                                                 </form>
-                                                <a href="{{route('admin.products.edit' , $data->id)}}" class="btn btn-info">Edit</a>
+                                                <a href="{{ route('admin.products.edit', $data->id) }}"
+                                                    class="btn btn-info">Edit</a>
                                             </div>
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
+                        <div >
+                            {!! $products->links() !!}
+                        </div>
                     </div>
 
                 </div>

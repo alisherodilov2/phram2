@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h2>Comment</h2>
+            <h2>{{__('backend.comment')}}</h2>
             <a href="{{ route('admin.comment.create') }}" class="btn btn-success">Create Comment</a>
         </div>
     </div>

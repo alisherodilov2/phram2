@@ -17,7 +17,7 @@
                         <div class="card-body">
                             @csrf
                             <div class="row">
-                                <h3>Create Blog</h3>
+                                <h3>Edit {{__('backend.blog')}}</h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="">Image</label>

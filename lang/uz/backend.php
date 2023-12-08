@@ -51,11 +51,11 @@ return [
     'fast' => 'Tez ishlash',
     'suport' => '24/7 Opertorlik hismati',
     'team' => 'Yuqori malakali mutaxasislar',
-    'footertext'=>"Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya",
-    'name'=>'Ism',
-    'about'=>'Biz haqimizda',
-    'history'=>'Bizning tarix',
-    'aboutdes'=>"
+    'footertext' => "Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya",
+    'name' => 'Ism',
+    'about' => 'Biz haqimizda',
+    'history' => 'Bizning tarix',
+    'aboutdes' => "
     “DORA LINE” xususiy korxonasi 2014-yilda tashkil etilgan va jadal rivojlanayotgan korxonalardan biri hisoblanadi.
      O'zbekiston farmatsevtika bozoridagi kompaniyalar.
      \"DORA LINE\" farmatsevtika kompaniyasi bo'lib, vitaminlar, minerallar,
@@ -105,8 +105,11 @@ return [
      Ushbu ustuvorliklarga rioya qilish orqali biz kompaniyaning bozordan yuqori o'sishini qo'llab-quvvatlaymiz va rentabellikni ta'minlaymiz
      investorlar va innovatsiyalarimiz tufayli bemorlar uchun mahsulot va xizmatlar sifatini yaxshilash
      qarorlar."
-     ,
-     'infofotter'=>" Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy",
-     'doraline'=>'"DORA LINE" MCHJ',
-     'partners'=>'Bizni hamkorlar'
+    ,
+    'infofotter' => " Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy",
+    'doraline' => '"DORA LINE" MCHJ',
+    'partners' => 'Bizni hamkorlar',
+    //  admin
+    'users' => 'Foydalanuvchilar',
+    'fill'=>'Filiyallar'
 ];

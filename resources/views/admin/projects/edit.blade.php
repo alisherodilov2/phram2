@@ -17,7 +17,7 @@
                         <div class="card-body">
                             @csrf
                             <div class="row">
-                                <h3>Edit Project</h3>
+                                <h3>Edit {{__('backend.projects')}}</h3>
                                 <div class="col-md-6 mt-2">
                                     <label for="">Image</label>
                                     <img src="{{$data->getFirstMediaUrl()}}" style="width: 250px;" alt="">

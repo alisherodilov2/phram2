@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Partner Edit</h2>
+                <h2>{{__('backend.partners')}} Edit</h2>
                 <form action="{{ route('admin.partner.update' , $data->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
