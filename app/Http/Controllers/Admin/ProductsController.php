@@ -38,7 +38,7 @@ class ProductsController extends Controller
             'description_ru' => 'required',
             'description_en' => 'required',
             'link' => 'required',
-            'products' => 'required|file|mimes:jpeg,png,pdf',
+            'products' => 'required|file|mimes:jpg,jpeg,png,pdf',
         ]);
         $product = Products::create($request->all());
        
