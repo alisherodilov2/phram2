@@ -14,7 +14,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Products::paginate(20);
-        return view("admin.products.index" , compact('products'));
+        return view("admin.products.index", compact('products'));
     }
 
     /**
@@ -37,11 +37,16 @@ class ProductsController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'link'=>'required',
-            'products'=>'required',
+            'link' => 'required',
+            'products' => 'required',
         ]);
         $product = Products::create($request->all());
-        $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
+        try {
+            //code...
+            $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
+        } catch (\Throwable $th) {
+            return back()->withErrors($th);
+        }
 
         return redirect()->route('admin.products.index');
     }
@@ -60,7 +65,7 @@ class ProductsController extends Controller
     public function edit(string $id)
     {
         $data = Products::find($id);
-        return view('admin.products.edit' , compact('data'));
+        return view('admin.products.edit', compact('data'));
     }
 
     /**
@@ -75,12 +80,12 @@ class ProductsController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'link'=>'required',
-           
+            'link' => 'required',
+
         ]);
         $product = Products::find($id);
         $product->update($request->all());
-        if($request->hasFile('products')){
+        if ($request->hasFile('products')) {
             $product->clearMediaCollection();
             $product->addMediaFromRequest('products')->usingName($product->id)->toMediaCollection();
         }
@@ -93,8 +98,8 @@ class ProductsController extends Controller
      */
     public function destroy(string $id)
     {
-       $p =   Products::find($id);
-       $p->delete();
-       return back();
+        $p = Products::find($id);
+        $p->delete();
+        return back();
     }
 }
