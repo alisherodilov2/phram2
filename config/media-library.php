@@ -12,7 +12,7 @@ return [
      * The maximum file size of an item in bytes.
      * Adding a larger file will result in an exception.
      */
-    'max_file_size' => 1024 * 1024 * 10, // 10MB
+    'max_file_size' => 2500 * 2500 * 20, // 10MB
 
     /*
      * This queue connection will be used to generate derived and responsive images.
@@ -118,7 +118,7 @@ return [
             '--all-progressive', // this will make sure the resulting image is a progressive one
         ],
         Spatie\ImageOptimizer\Optimizers\Pngquant::class => [
-            '--force', // required parameter for this package
+            
         ],
         Spatie\ImageOptimizer\Optimizers\Optipng::class => [
             '-i0', // this will result in a non-interlaced, progressive scanned image
