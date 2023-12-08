@@ -520,7 +520,7 @@
                                             <h4 class="tp-team__title mb-15"><a
                                                     href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title }}</a>
                                             </h4>
-                                            <a href="{{ route('frontend.products.show', $item->id) }}"
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"
                                                 class="research-item__btn">{{ __('backend.explore') }}</a>
                                         </div>
                                     </div>
@@ -537,7 +537,7 @@
                                             <h4 class="tp-team__title mb-15"><a
                                                     href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title_ru }}</a>
                                             </h4>
-                                            <a href="{{ route('frontend.products.show', $item->id) }}"
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"
                                                 class="research-item__btn">{{ __('backend.explore') }}</a>
                                         </div>
                                     </div>
@@ -554,7 +554,7 @@
                                             <h4 class="tp-team__title mb-15"><a
                                                     href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title_en }}</a>
                                             </h4>
-                                            <a href="{{ route('frontend.products.show', $item->id) }}"
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"
                                                 class="research-item__btn">{{ __('backend.explore') }}</a>
                                         </div>
                                     </div>
