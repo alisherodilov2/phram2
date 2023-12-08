@@ -487,8 +487,9 @@
                 </div>
             </div>
         </section>
+
         <!-- appoinment-area-end -->
-        {{-- <!-- team-area -->
+        <!-- team-area -->
         <section class="team-area grey-bg pt-120 pb-80" data-background="assets/img/shape/shape-bg-01.png">
             <div class="container">
                 <div class="row align-items-center">
@@ -508,36 +509,67 @@
                 <div class="swiper-container team-active wow fadeInUp" data-wow-delay=".3s">
                     <div class="swiper-wrapper">
                         @foreach (App\Models\Products::all() as $product)
-                            <div class="swiper-slide">
-                                <div class="tp-team mb-50">
-                                    <div class="tp-team__thumb fix">
-                                        <a href="{{ route('frontend.products.show', $product->id) }}"><img
-                                                src="{{ $product->getFirstMediaUrl() }}" alt="team-thumb"></a>
-                                    </div>
-                                    <div class="tp-team__content">
-                                        <h4 class="tp-team__title mb-15"><a
-                                                href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title }}</a>
-                                        </h4>
-                                        <p> {!! substr($product->description_en, 0, 250) !!}...</p>
+                            @if (app()->getLocale() == 'uz')
+                                <div class="swiper-slide">
+                                    <div class="tp-team mb-50">
+                                        <div class="tp-team__thumb fix">
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"><img
+                                                    src="{{ $product->getFirstMediaUrl() }}" alt="team-thumb"></a>
+                                        </div>
+                                        <div class="tp-team__content">
+                                            <h4 class="tp-team__title mb-15"><a
+                                                    href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title }}</a>
+                                            </h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
+                            @if (app()->getLocale() == 'ru')
+                                <div class="swiper-slide">
+                                    <div class="tp-team mb-50">
+                                        <div class="tp-team__thumb fix">
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"><img
+                                                    src="{{ $product->getFirstMediaUrl() }}" alt="team-thumb"></a>
+                                        </div>
+                                        <div class="tp-team__content">
+                                            <h4 class="tp-team__title mb-15"><a
+                                                    href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title_ru }}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                            @if (app()->getLocale() == 'en')
+                                <div class="swiper-slide">
+                                    <div class="tp-team mb-50">
+                                        <div class="tp-team__thumb fix">
+                                            <a href="{{ route('frontend.products.show', $product->id) }}"><img
+                                                    src="{{ $product->getFirstMediaUrl() }}" alt="team-thumb"></a>
+                                        </div>
+                                        <div class="tp-team__content">
+                                            <h4 class="tp-team__title mb-15"><a
+                                                    href="{{ route('frontend.products.show', $product->id) }}">{{ $product->title_en }}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
             </div>
-        </section> --}}
-       
+        </section>
+
         <div class="brand-area pt-130 pb-130">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-md-12 col-12">
-                       <center>
-                        <div class="tp-section">
-                            <p></p>
-                            <h3 class="tp-section__title mb-75">{{ __('backend.partners') }}</h3>
-                        </div>
-                       </center>
+                        <center>
+                            <div class="tp-section">
+                                <p></p>
+                                <h3 class="tp-section__title mb-75">{{ __('backend.partners') }}</h3>
+                            </div>
+                        </center>
                     </div>
                 </div>
                 <div class="swiper-container brand-active">
