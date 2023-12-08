@@ -5,11 +5,18 @@
             <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="col-md-12">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <span class="text-danger">{{ $error }}</span>
+                        @endforeach
+                    @endif
+                </div>
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
                             @csrf
                             <div class="row">
-                                <h3>Create {{__('backend.products')}} </h3>
+                                <h3>Create {{ __('backend.products') }} </h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="">Image</label>
@@ -27,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mt-2">
-                                   
+
                                     <label for="">Titles</label>
                                     <input type="text" class="form-control" name="title" placeholder="title">
                                     @error('title')
