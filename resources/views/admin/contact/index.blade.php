@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact Table</h1>
+                <h1>{!!__('backend.contact')!!}</h1>
                 <div class="card">
                     <div class="card-body">
                         <table class="table">

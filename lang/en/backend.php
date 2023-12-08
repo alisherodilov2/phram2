@@ -111,8 +111,9 @@ return [
     ",
     'infofotter'=>"Tashkent city, Yunusabad district, Niyozbek road street, 1 house",
     'doraline'=>'"DORA LINE" LLC',
-    'partners'=>'Our partners'
-
-
+    'partners'=>'Our partners',
+    //admin
+    'users'=>'Users',
+    'fill'=>'phyllias'
     
 ];

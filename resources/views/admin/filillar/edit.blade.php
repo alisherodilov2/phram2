@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Edit Create</h2>
+                <h2>{{__('backend.fill')}} Create</h2>
                 <form action="{{ route('admin.filillar.update', $fill->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

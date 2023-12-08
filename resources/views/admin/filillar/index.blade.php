@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2>Filillar</h2>
+                <h2>{{__('backend.fill')}}</h2>
                 <a href="{{ route('admin.filillar.create') }}" class="btn btn-success">Create Filial</a>
                 <div class="card mt-2">
                     <div class="card-body">

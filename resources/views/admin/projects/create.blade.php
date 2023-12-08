@@ -9,7 +9,7 @@
                         <div class="card-body">
                             @csrf
                             <div class="row">
-                                <h3>Create Project</h3>
+                                <h3>Create {{__('backend.projects')}}</h3>
                                 <div class="col-md-6 mt-2">
                                     <label for="">Image</label>
                                     <input type="file" class="form-control" name="photo">

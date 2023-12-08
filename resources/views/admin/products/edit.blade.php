@@ -10,7 +10,7 @@
                         <div class="card-body">
                             @csrf
                             <div class="row">
-                                <h3>Edit Products</h3>
+                                <h3>Edit {{__('backend.products')}} </h3>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="">Image</label>

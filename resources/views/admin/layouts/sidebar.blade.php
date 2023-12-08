@@ -5,20 +5,20 @@
                 <div class="sb-sidenav-menu-heading">User Management</div>
                 <a class="nav-link" href="{{route('admin.users.index')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                    Users
+                    {{__('backend.users')}}
                 </a>
                 <div class="sb-sidenav-menu-heading">Sub tablelar</div>
                 <a class="nav-link" href="{{route('admin.projects.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-diagram-project"></i></div>
-                    Projectlar
+                    {{__('backend.projects')}}
                 </a>
                 <a class="nav-link" href="{{route('admin.partner.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-regular fa-handshake"></i></div>
-                    Partners
+                    {{__('backend.partners')}}
                 </a>
                 <a class="nav-link" href="{{route('admin.filillar.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-earth-americas"></i></div>
-                    Filillar
+                    {{__('backend.fill')}}
                 </a>
                 <a class="nav-link" href="{{route('admin.vacancy.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-users-line"></i></div>
@@ -26,7 +26,7 @@
                 </a>
                 <a class="nav-link" href="{{route('admin.products.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-brands fa-dropbox"></i></div>
-                    Products
+                    {{__('backend.products')}}
                 </a>
 
                 <a class="nav-link" href="{{route('admin.contact.index')}}">
@@ -39,7 +39,7 @@
                 </a>
                 <a class="nav-link" href="{{route('admin.comment.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-regular fa-comments"></i></div>
-                    Comment
+                    {{__('backend.comment')}}
                 </a>
                 
             </div>

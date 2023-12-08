@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h2>Blogs</h2>
+            <h2>{{__('backend.blog')}}</h2>
             <a href="{{ route('admin.blogs.create') }}" class="btn btn-success">Create Blogs</a>
             <div class="card mt-2">
                 <div class="card-body">
