@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2>Partners</h2>
+                <h2>Filillar</h2>
                 <a href="{{ route('admin.filillar.create') }}" class="btn btn-success">Create Filial</a>
                 <div class="card mt-2">
                     <div class="card-body">
@@ -54,7 +54,7 @@
                                                     @method('DELETE')
                                                     <button class="btn btn-danger">Delete</button>
                                                 </form>
-                                                <button class="btn btn-info">Edit</button>
+                                                <a class="btn btn-info" href="{{route('admin.filillar.edit' , $fil->id)}}">Edit</a>
                                             </div>
                                         </td>
                                     </tr>

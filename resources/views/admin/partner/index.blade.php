@@ -35,12 +35,15 @@
                                 <td>{{$partner->name}}</td>
                                 <td>{{$partner->description}}</td>
                                 <td>
-                                    <form action="{{ route('admin.partner.destroy', $partner->id) }}"
-                                        method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-danger">Delete</button>
-                                    </form>
+                                    <div class="d-flex">
+                                        <form action="{{ route('admin.partner.destroy', $partner->id) }}"
+                                            method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger">Delete</button>
+                                        </form>
+                                        <a href="{{route('admin.partner.edit' , $partner->id)}}" class="btn btn-primary">Edit</a>
+                                    </div>
                                 </td>
                                </tr>
                                @endforeach

@@ -59,7 +59,8 @@ class FiliallarController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $fill = Filliar::find($id);
+        return view('admin.filillar.edit', compact('fill'));
     }
 
     /**
@@ -67,7 +68,22 @@ class FiliallarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'name' => 'required',
+                'name_ru' => 'required',
+                'name_en' => 'required',
+                'subtext' => 'required',
+                'subtext_en' => 'required',
+                'subtext_ru' => 'required',
+                'number' => 'required',
+                'region_id' => 'required'
+            ]
+        );
+        $fill = Filliar::find($id);
+        $fill->update($request->all());
+        return redirect()->route('admin.filillar.index');
+
     }
 
     /**
@@ -75,6 +91,8 @@ class FiliallarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = Filliar::find($id);
+        $data->delete();
+        return back();
     }
 }

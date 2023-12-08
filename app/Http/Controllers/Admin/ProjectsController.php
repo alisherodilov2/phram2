@@ -37,7 +37,7 @@ class ProjectsController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'photo'=>'required'
+            'photo' => 'required'
         ]);
         $projects = Projects::create($request->all());
 
@@ -60,7 +60,8 @@ class ProjectsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Projects::find($id);
+        return view('admin.projects.edit', compact('data'));
     }
 
     /**
@@ -68,7 +69,23 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $request->validate([
+            'title' => 'required',
+            'title_ru' => 'required',
+            'title_en' => 'required',
+            'description' => 'required',
+            'description_ru' => 'required',
+            'description_en' => 'required',
+            'link'=>'required',
+        ]);
+        $project = Projects::find($id);
+        $project->update($request->all());
+        if ($request->hasFile('photo')) {
+            $project->clearMediaCollection();
+            $project->addMediaFromRequest('photo')->usingName($project->id)->toMediaCollection();
+        }
+        return redirect()->route('admin.projects.index');
     }
 
     /**

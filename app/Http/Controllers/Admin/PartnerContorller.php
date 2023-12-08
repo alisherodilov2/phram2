@@ -57,7 +57,8 @@ class PartnerContorller extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Partners::find($id);
+        return view('admin.partner.edit' , compact('data'));
     }
 
     /**
@@ -65,7 +66,23 @@ class PartnerContorller extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'name_ru'=>'required',
+            'description_ru'=>'required',
+            'name_en'=>'required',
+            'description_en'=>'required',
+           
+        ]);
+        $partner = Partners::find($id);
+        $partner->update($request->all());
+         if ($request->hasFile('image')) {
+            $partner->clearMediaCollection();
+            $partner->addMediaFromRequest('image')->usingName($partner->id)->toMediaCollection();
+        }
+        return redirect()->route('admin.partner.index');
+        
     }
 
     /**

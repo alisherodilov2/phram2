@@ -47,10 +47,13 @@
                                     {{$item->title_en}}
                                 </td>
                                 <td>
+                                   <div class="d-flex">
                                     <form action="{{ route('admin.blogs.destroy', $item->id) }}"
                                         method="POST">
                                         @csrf @method('DELETE')<button class="btn btn-danger">Delete</button>
                                     </form>
+                                    <a href="{{route('admin.blogs.edit' , $item->id)}}" class="btn btn-primary">Edit</a>
+                                   </div>
                                 </td>
                               </tr>
                           @endforeach
