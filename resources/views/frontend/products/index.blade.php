@@ -60,7 +60,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a>
                                             </h5>
-                                            {!! substr($item->description, 0, 250) !!}...
+                                            
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -84,7 +84,8 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a>
                                             </h5>
-                                            {!! substr($item->description, 0, 250) !!}...
+                                            
+                                            
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -108,7 +109,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a>
                                             </h5>
-                                            {!! substr($item->description, 0, 250) !!}...
+                                            
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
