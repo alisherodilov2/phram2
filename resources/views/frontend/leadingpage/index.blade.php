@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="banner__shape d-none d-lg-block">
-                <img src="{{ asset('img/banner1.png') }}" alt="banner-img">
+                <img src="{{ asset('img/breadcrumb-03.jpg') }}" alt="banner-img">
                 <div class="banner__video-btn">
                     <a class="banner__video-icon popup-video" href="https://www.youtube.com/watch?v=ye0LHrkwpSI"><i
                             class="fa-solid fa-play"></i></a>
@@ -197,7 +197,7 @@
                     <div class="col-xl-6 col-lg-12">
                         <div class="about__thumb mb-60 wow fadeInLeft" data-wow-delay=".4s">
                             <div class="about__img">
-                                <img src="{{ asset('img/banner2.png') }}" alt="about-bg-img">
+                                <img src="{{ asset('img/banner2.jpg') }}" alt="about-bg-img">
                                 <div class="about__exprience">
                                     <h3>9</h3>
                                     <i>{!! __('backend.experice') !!}</i>
@@ -590,46 +590,7 @@
                 </div>
             </div>
         </div>
-        <section class="testimonial-area testimonial-bg pt-125 pb-130" data-background="assets/img/shape/shape-bg-02.png">
-            <div class="container">
-                <div class="row wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-lg-12">
-                        <div class="tp-section text-center">
-                            <span
-                                class="tp-section__sub-title sub-title-white left-line-white right-line-white mb-25">{{ __('backend.review') }}</span>
-                            <h3 class="tp-section__title title-white mb-70">{{ __('backend.comment') }}</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-container tp-test-active pt-40">
-                    <div class="swiper-wrapper">
-                        @foreach (App\Models\Comment::all() as $comment)
-                            <div class="swiper-slide">
-                                <div class="tp-testi p-relative mb-70">
-
-                                    <div class="tp-testi__content text-center">
-                                        <p>
-                                            {{ $comment->description }}
-                                        </p>
-                                        <h5 class="tp-testi__avata-title">{{ $comment->name }}</h5>
-                                        <span class="tp-testi__ava-position">{{ $comment->title }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <div class="tp-test-arrow d-flex align-items-center justify-content-center">
-                            <div class="tp-test-prv"><i class="fa-regular fa-arrow-left"></i></div>
-                            <div class="tp-test-nxt"><i class="fa-regular fa-arrow-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+      
         <!-- blog-area-end -->
 
     </main>

@@ -5,7 +5,7 @@
 @section('content')
     <main>
         <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
-            style="background-size: cover;background-repeat:no-repeat; background-attachment: fixed;"
+            style="background-size: cover;background-repeat:no-repeat;background-attachment: fixed;background-image:url('{{ asset('img/product.jpg') }}')"
             data-background="{{ asset('img/product.jpg') }}">
             <div class="container">
                 <div class="row align-items-center">
@@ -60,7 +60,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a>
                                             </h5>
-                                            
+
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -84,8 +84,8 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a>
                                             </h5>
-                                            
-                                            
+
+
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
@@ -109,7 +109,7 @@
                                             <h5 class="services-thumb-box__title"><a
                                                     href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a>
                                             </h5>
-                                            
+
                                             <br> <br>
                                             <div class="d-flex">
                                                 <a href="{{ route('frontend.products.show', $item->id) }}"
