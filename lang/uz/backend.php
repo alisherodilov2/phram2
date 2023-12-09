@@ -68,5 +68,6 @@ return [
     'partners' => 'Bizni hamkorlar',
     //  admin
     'users' => 'Foydalanuvchilar',
-    'fill' => 'Filiyallar'
+    'fill' => 'Filiyallar',
+    'ser'=>'Sertifikatlar'
 ];
