@@ -56,60 +56,17 @@ return [
     'about' => 'Biz haqimizda',
     'history' => 'Bizning tarix',
     'aboutdes' => "
-    “DORA LINE” xususiy korxonasi 2014-yilda tashkil etilgan va jadal rivojlanayotgan korxonalardan biri hisoblanadi.
-     O'zbekiston farmatsevtika bozoridagi kompaniyalar.
-     \"DORA LINE\" farmatsevtika kompaniyasi bo'lib, vitaminlar, minerallar,
-     dorivor o'tlardan tabiiy preparatlar va hayotiylikni oshirish va mustahkamlash
-     salomatlik.
-     Hozirgi vaqtda DORA LINE kompaniyasining assortimentida 9 turdagi dori vositalari mavjud
-     planshet shakli.
-     Barcha \"DORA LINE\" mahsulotlari tabiiy o'simlik xom ashyosi asosida ishlab chiqariladi
-     va mineral kelib chiqishi.
-     \"DORA LINE\" tabiiy preparatlari asl nusxasini ishlab chiqish tufayli doimiy ravishda o'sib bormoqda
-     aniq klinik samaradorlikka ega dorilar.
-     DORA LINE kompaniyasidagi barcha jihozlar va ishlab chiqarish jarayonlari to'liq mos keladi
-     xalqaro standartlar.
-     O'z preparatlarini ishlab chiqarishda \"DORA LINE\" shifobaxsh kuchga ega bo'lgan moddalardan keng foydalanadi.
-     Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻtlar. 80% gacha ishlatiladi
-     Kompaniyamiz o'tlari ekologik tozaligi bilan mashhur tog' etaklarining tabiiy muhitida yig'iladi.
-     Bizning vazifamiz - Biz innovatsion mahsulotlarni o'z vaqtida tadqiq etish, ishlab chiqish va bozorga chiqarishni xohlaymiz
-     kasalliklarning oldini olish, shuningdek, yengillik uchun mo'ljallangan tabiiy preparatlar
-     azob chekish va bemorlarning hayot sifatini yaxshilash.
-     Shuningdek, biz muvaffaqiyatli natijalarimizni aks ettiruvchi aktsiyadorlarga daromad keltirmoqchimiz.
-     \"DORA LINE\" faoliyati va shu bilan birga o'z g'oyalari va vaqtini sarflaganlarni mukofotlash
-     bizning kompaniyamiz.
-
-     Asosiy maqsadimiz – sifatli, samarali va arzon dori vositalari ishlab chiqarish.
-     Bizning maqsadimiz mahsulotlarimizning yuqori sifati va xavfsizligini kafolatlashdir.
-     DORA LINE preparatlari standartga muvofiq ishlab chiqariladi. Ishlab chiqarishning har bir bosqichi
-     xomashyo sotib olishdan boshlab va qadoqlash bilan tugaydigan, shuningdek, tayyor mahsulotlarni saqlash joyi joylashgan.
-     mutaxassislarimizning majburiy nazorati ostida.
-     Marketing xizmati doimiy ravishda bozor ehtiyojlarini o'rganadi va ularga yechimlar ishlab chiqadi
-     shifokorlar va bemorlarning ehtiyojlarini hisobga olish. Ushbu yondashuv zamonaviy ishlab chiqarish imkonini beradi
-     dori vositalarini hamyonbop narxda va xalqaro standartlarga javob beradigan sifatda.
-     DORA LINE joriy va kelajakdagi ehtiyojlarni hisobga olgan holda o'sish yo'lini tanlaydi
-     farmatsevtika bozori. Biz kelajagimizni iste'molchilarga mas'uliyatli munosabatda quramiz va
-     sog'liqni saqlash mutaxassislari.
-     Kompaniyamizning asosiy qadriyati - bu bizning xodimlarimiz, shuning uchun ularning sog'lig'iga g'amxo'rlik qilish va
-     Xavfsizlik barcha jarayonlarni tashkil etishning markazidir.
-     \"DORA LINE\" ning uzoq muddatli rivojlanish strategiyasi bizning tasdiqlangan va
-     diversifikatsiyalangan portfel va uni amalga oshirish sog'liqni saqlash ehtiyojlarini qondirishdir
-     global miqyosda va barcha biznes bo'linmalarida yuqori samarali tibbiy echimlar, -
-     Kompaniyaning uchta asosiy ustuvorligidan kelib chiqadi:
-     - yangi dori vositalarini tadqiq etish va ishlab chiqish orqali innovatsiyalar sohasida yetakchilikni mustahkamlash va
-     joriy portfelni qo'llash doirasini kengaytirish;
-     - bozorga yangi dori vositalarining kiritilishi va kengayishi hisobiga barcha bo'linmalarda o'sish sur'atlarining tezlashishi.
-     rivojlanayotgan bozorlarda mavjudligi;
-     - moliyaviy imkoniyatlarni bo'shatgan bir qator korporativ tashabbuslar orqali samaradorlikni oshirish
-     yangi dori-darmonlarni tadqiq qilish va ishlab chiqishga sarmoya kiritish uchun resurslar.
-     Ushbu ustuvorliklarga rioya qilish orqali biz kompaniyaning bozordan yuqori o'sishini qo'llab-quvvatlaymiz va rentabellikni ta'minlaymiz
-     investorlar va innovatsiyalarimiz tufayli bemorlar uchun mahsulot va xizmatlar sifatini yaxshilash
-     qarorlar."
+    <b> “DORA LINE” MChJ kompaniyasi </b> 2014-yilda tashkil etilgan bo‘lib, O‘zbekiston farmatsevtika bozorida jadal rivojlanayotgan kompaniyalardan biri hisoblanadi. \"DORA LINE\" farmatsevtika kompaniyasi bo'lib, vitaminlar, minerallar, shifobaxsh o'tlardan tabiiy preparatlar ishlab chiqarishga, hayotiylikni oshirish va salomatlikni yaxshilashga ixtisoslashgan. <br> <br>
+    <b> Hozirgi vaqtda DORA LINE </b> mahsulot assortimenti planshetlar shaklidagi 9 turdagi dori vositalarini o'z ichiga oladi. DORA LINE kompaniyasining barcha mahsulotlari o'simlik va mineral kelib chiqishi tabiiy xom ashyo asosida ishlab chiqariladi. \"DORA LINE\" tabiiy dorilar liniyasi sezilarli klinik samaradorlikka ega original dorilarni ishlab chiqish tufayli doimiy ravishda o'sib bormoqda. DORA LINE kompaniyasidagi barcha asbob-uskunalar va ishlab chiqarish jarayonlari xalqaro standartlarga toʻliq javob beradi.Oʻz preparatlarini ishlab chiqarishda DORA LINE Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan, shifobaxsh kuchi katta boʻlgan shifobaxsh giyohlardan keng foydalaniladi.80% gacha. korxonamizda qo'llaniladigan o'tlar ekologik tozaligi bilan mashhur bo'lgan tog' etaklarining tabiiy muhitida yig'iladi. <br><br>
+    <b>Bizning vazifamiz</b> - Biz kasallikning oldini olish, shuningdek, azob-uqubatlarni engillashtirish va bemorlarning hayot sifatini yaxshilash uchun mo'ljallangan innovatsion tabiiy mahsulotlarni tadqiq qilish, ishlab chiqish va bozorga o'z vaqtida olib chiqishni xohlaymiz. Shuningdek, biz aksiyadorlarga DORA LINE muvaffaqiyatli faoliyatini aks ettiruvchi daromadlarni taqdim etishni, shu bilan birga o‘z g‘oyalari va vaqtini kompaniyamizga sarflaganlarni mukofotlashni istaymiz. Asosiy maqsadimiz – sifatli, samarali va arzon dori vositalari ishlab chiqarish. Bizning maqsadimiz mahsulotlarimizning yuqori sifati va xavfsizligini kafolatlashdir.<br>
+    <b>DORA LINE preparatlari</b> standartga muvofiq ishlab chiqariladi. Ishlab chiqarishning har bir bosqichi, xomashyo xarid qilishdan tortib, qadoqlash, shuningdek, tayyor mahsulotlarni saqlash mutaxassislarimiz tomonidan majburiy nazoratga olingan. Marketing xizmati doimiy ravishda bozor ehtiyojlarini o'rganadi va shifokorlar va bemorlarning ehtiyojlarini hisobga olgan holda echimlarni ishlab chiqadi. Bunday yondashuv hamyonbop narx va xalqaro standartlarga javob beradigan sifatli zamonaviy dori vositalari ishlab chiqarish imkonini beradi. DORA LINE farmatsevtika bozorining joriy va kelajakdagi ehtiyojlarini hisobga olgan holda o'sish yo'lini tanlaydi. Biz kelajagimizni iste'molchilar va tibbiyot xodimlariga nisbatan mas'uliyatli munosabatda quramiz. <br><br>
+    <b>Kompaniyamizning asosiy</b> qadriyati bizning xodimlarimizdir, shuning uchun ularning sog'lig'i va xavfsizligiga g'amxo'rlik barcha jarayonlarning markazida turadi. \"DORA LINE\" ning uzoq muddatli rivojlanish strategiyasi bizning tasdiqlangan va diversifikatsiyalangan portfelimizga asoslanadi va uni amalga oshirish - sog'liqni saqlash ehtiyojlarini global miqyosda va barcha biznes bo'linmalarida yuqori samarali tibbiy echimlar bilan ta'minlash - uchta asosiy ustuvor yo'nalishga asoslanadi. kompaniya: - yangi dori vositalarini tadqiq qilish va ishlab chiqish orqali innovatsiyalar sohasida yetakchilikni mustahkamlash va mavjud portfel ko‘lamini kengaytirish; - bozorga yangi dori vositalarini kiritish va rivojlanayotgan bozorlarda ishtirokini kengaytirish orqali barcha bo'linmalarda o'sishni tezlashtirish; - tadqiqot va yangi dori-darmonlarni ishlab chiqishga sarmoya kiritish uchun moliyaviy resurslarni bo'shatish uchun bir qator korporativ tashabbuslar orqali samaradorlikni oshirish. Ushbu ustuvorliklarga intilib, biz kompaniyaning bozordan yuqori o'sishini qo'llab-quvvatlaymiz, investorlarga daromad keltiramiz va innovatsion echimlarimiz orqali mahsulot va bemorlarga xizmat ko'rsatamiz. <br><br>
+    "
     ,
     'infofotter' => " Toshkent shahri, Yunusobod tumani, Niyozbek yo`li ko'chasi, 1-uy",
     'doraline' => '"DORA LINE" MCHJ',
     'partners' => 'Bizni hamkorlar',
     //  admin
     'users' => 'Foydalanuvchilar',
-    'fill'=>'Filiyallar'
+    'fill' => 'Filiyallar'
 ];
