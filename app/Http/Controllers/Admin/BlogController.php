@@ -38,7 +38,7 @@ class BlogController extends Controller
             'description' => 'required',
             'description_ru' => 'required',
             'description_en' => 'required',
-            'mainmainPhoto' => 'required'
+            'mainPhoto' => 'required'
         ]);
         $partner = Blog::create($request->all());
         $partner->addMediaFromRequest('mainPhoto')->usingName($partner->id)->toMediaCollection();
