@@ -37,7 +37,8 @@ class PartnerContorller extends Controller
             'description_ru'=>'required',
             'name_en'=>'required',
             'description_en'=>'required',
-            'image'=>'required'
+            'image'=>'required',
+            'link'=>'required'
         ]);
         $partner =  Partners::create($request->all());
         $partner->addMediaFromRequest('image')->usingName($partner->id)->toMediaCollection();
