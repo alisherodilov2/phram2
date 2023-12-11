@@ -565,7 +565,39 @@
                 </div>
             </div>
         </section>
-
+        <section class="gallery-area grey-bg pt-120 pb-130" data-background="assets/img/shape/shape-bg-01.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tp-section text-center">
+                            <h3 class="tp-section__title mb-70">{!! __('backend.ser') !!}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="tp-gallery ml-15 mr-15 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="swiper-container gall-active">
+                        <div class="swiper-wrapper">
+                            @foreach (App\Models\Documents::all() as $blog)
+                                <div class="swiper-slide">
+                                    <div class="tp-gallery__item p-relative mb-70">
+                                        <div class="tp-gallery__img p-relative">
+                                            <img src="{{ $blog->getFirstMediaUrl() }}" alt="gallery-img">
+                                            <div class="tp-gallery__info">
+                                                <a class="popup-image" href="{{ $blog->getFirstMediaUrl() }}"><i
+                                                        class="fa-solid fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
         <div class="brand-area pt-130 pb-130">
             <div class="container">
                 <div class="row align-items-center">
@@ -590,7 +622,7 @@
                 </div>
             </div>
         </div>
-      
+
         <!-- blog-area-end -->
 
     </main>

@@ -53,5 +53,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth' , '
     Route::resource("contact", App\Http\Controllers\Admin\ContactController::class);
     Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class);
     Route::resource('comment', App\Http\Controllers\Admin\CommentController::class);
+    Route::resource('docs', App\Http\Controllers\Admin\DocumentController::class);
 });
 //frontend page

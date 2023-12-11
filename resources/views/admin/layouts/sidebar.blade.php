@@ -28,7 +28,10 @@
                     <div class="sb-nav-link-icon"><i class="fa-brands fa-dropbox"></i></div>
                     {{__('backend.products')}}
                 </a>
-
+                <a class="nav-link" href="{{route('admin.docs.index')}}">
+                    <div class="sb-nav-link-icon"><i class="fa-regular fa-doc"></i></div>
+                  Documents
+                </a>
                 <a class="nav-link" href="{{route('admin.contact.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-comment"></i></div>
                     {!! __('backend.contact') !!}
@@ -41,6 +44,7 @@
                     <div class="sb-nav-link-icon"><i class="fa-regular fa-comments"></i></div>
                     {{__('backend.comment')}}
                 </a>
+                
                 
             </div>
         </div>

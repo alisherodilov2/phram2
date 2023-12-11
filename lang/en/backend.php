@@ -71,6 +71,7 @@ return [
     'partners'=>'Our partners',
     //admin
     'users'=>'Users',
-    'fill'=>'phyllias'
+    'fill'=>'phyllias',
+    'ser'=>'Certificate'
     
 ];
