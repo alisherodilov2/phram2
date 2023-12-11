@@ -1,8 +1,9 @@
 <header class="d-none d-xl-block">
     <div class="header-custom" id="header-sticky">
         <div class="header-logo-box">
-            <a href="/"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
-                    alt="logo"></a>
+            <a href="/"><img
+                src="{{asset('logo/logoDark.png')}}"
+                alt="logo"></a>
         </div>
         <div class="header-menu-box">
             <div class="header-menu-top">

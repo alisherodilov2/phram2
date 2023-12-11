@@ -5,7 +5,7 @@
                 <div class="col-xxl-2 col-lg-3">
                     <div class="logo">
                         <a href="/"><img
-                                src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+                                src="{{asset('logo/logoDark.png')}}"
                                 alt="logo"></a>
                     </div>
                 </div>
