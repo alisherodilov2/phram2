@@ -47,9 +47,9 @@ return [
     'message' => 'xabar',
     // why us
     'whyus' => 'Nega biz',
-    'servies' => 'Yuqori sifatli hismat ko\'rsatish',
+    'servies' => 'Yuqori sifatli xizmat ko\'rsatish',
     'fast' => 'Tez ishlash',
-    'suport' => '24/7 Opertorlik hismati',
+    'suport' => '24/7 Opertorlik xizmati',
     'team' => 'Yuqori malakali mutaxasislar',
     'footertext' => "Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya",
     'name' => 'Ism',
