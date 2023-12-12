@@ -47,7 +47,7 @@
                                 <li>
                                    {{__('backend.infofotter')}}
                                 </li>
-                                <li><a href="tel:+9159008855">(+998)94 211 70 10 </a></li>
+                                <li><a href="tel:+9159008855">(+998) 94 211 44 44 </a></li>
                                 <li><a href="mailto:doraline_company@mail.ru">doraline_company@mail.ru</a></li>
                                
                             </ul>
