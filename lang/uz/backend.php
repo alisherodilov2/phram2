@@ -46,7 +46,7 @@ return [
     'eNumber' => 'Raqamingizni kiriting',
     'message' => 'xabar',
     // why us
-    'whyus' => 'Nega biz',
+    'whyus' => 'Bizning kuchli tomonlarimiz',
     'servies' => 'Yuqori sifatli xizmat ko\'rsatish',
     'fast' => 'Tez ishlash',
     'suport' => '24/7 Opertorlik xizmati',
