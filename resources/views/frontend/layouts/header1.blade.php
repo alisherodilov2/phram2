@@ -24,7 +24,7 @@
                                 <circle cx="2" cy="12" r="2" fill="#0E63FF" />
                             </svg>
                             <span></span>
-                            <a href="tel:+9159008855"> (+998) 94 211 44 44 </a>
+                            <a href="tel:+998 94 211 44 44"> (+998) 94 211 44 44 </a>
                         </div>
                     </div>
                     <div class="col-lg-8">
