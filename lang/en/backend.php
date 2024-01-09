@@ -48,7 +48,7 @@ return [
     'eNumber'=>'Enter your number',
     'message'=>'Message',
     //why us
-    'whyus'=>'Why Choose us' ,
+    'whyus'=>'Our strong side' ,
     'servies'=>'High Quality <br> Services',
     'fast'=>'Fast Working <br>Process',
     'suport'=>'24/7 Customer <br> Support',
