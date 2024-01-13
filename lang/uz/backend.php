@@ -1,7 +1,7 @@
 <?php
 return [
     //welcome page,
-    'welcome' => 'Doralinega xush kelibsz',
+    'welcome' => 'Doralinega xush kelibsiz',
     'maintext' => 'Biz Sizning Sog’ligingiz Haqida Qayg’uramiz',
     'mainsubtext' => "DORA Line kompaniyasi 2014-yildan buyon o’z faoliyatini olib boradi. Shu vaqt mobaynida iste'molchilarga  34 dan ortiq mahsulotlarini taqdim etmoqda.",
     'satic' => '100% mamnun mijozlar  ',
