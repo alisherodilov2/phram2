@@ -69,7 +69,7 @@ class PermissionSeeder extends Seeder
         ];
         Role::insert($roles);
         $roles = Role::pluck('name')->toArray();
-        $user = User::find(1);
+        $user = User::find(4);
         $user->syncRoles($roles);
         $permissions = Permission::pluck('name')->toArray();
 
