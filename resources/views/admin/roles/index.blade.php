@@ -95,9 +95,10 @@
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form action="{{ route('admin.permission.store') }}"
+                                                                <form action="{{ route('admin.permission.update' , $role->id) }}"
                                                                     method="post">
                                                                     @csrf
+                                                                    @method('PUT')
                                                                     <label for="">Nomi</label>
                                                                     <input type="text" value="{{ $role->name }}"
                                                                         class="form-control" name="name">
