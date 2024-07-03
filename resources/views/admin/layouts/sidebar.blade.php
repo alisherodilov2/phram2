@@ -2,11 +2,13 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
+                @if(auth()->user()->name == 'admin')
                 <div class="sb-sidenav-menu-heading">User Management</div>
                 <a class="nav-link" href="{{route('admin.users.index')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     {{__('backend.users')}}
                 </a>
+                @endif
                 <div class="sb-sidenav-menu-heading">Sub tablelar</div>
                 <a class="nav-link" href="{{route('admin.projects.index')}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-diagram-project"></i></div>

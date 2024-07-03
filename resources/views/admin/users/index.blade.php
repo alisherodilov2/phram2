@@ -38,7 +38,7 @@
                                             <div class="d-flex">
                                                 <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST">
                                                     @csrf @method('DELETE')<button class="btn btn-danger">Delete</button></form>
-                                                    <button class="btn btn-info">Edit</button>
+                                                    <a class="btn btn-info" href="{{route('admin.users.edit' , $user->id)}}">Edit</a>
                                             </div>
                                         </td>
                                     </tr>

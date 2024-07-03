@@ -56,7 +56,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.users.edit'  , compact('user'));
     }
 
     /**
@@ -64,7 +65,14 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required'
+        ]);
+        $user = User::find($id);
+        $user->update($request->all());
+        return redirect()->route('admin.users.index');
     }
 
     /**
