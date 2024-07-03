@@ -29,10 +29,19 @@
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Roles</label>
+                        <select name="roles[]" class="form-control selectpicker" id="" multiple>
+                            @foreach ($roles as $role)
+                                <option value="{{ $role->name }}">{{ $role->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
+                   
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

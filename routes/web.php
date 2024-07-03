@@ -54,5 +54,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth' , '
     Route::resource('blogs', App\Http\Controllers\Admin\BlogController::class);
     Route::resource('comment', App\Http\Controllers\Admin\CommentController::class);
     Route::resource('docs', App\Http\Controllers\Admin\DocumentController::class);
+    Route::resource('permission'  , App\Http\Controllers\Admin\RoleController::class);
 });
 //frontend page

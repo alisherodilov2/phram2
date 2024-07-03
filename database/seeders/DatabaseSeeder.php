@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ContactSeeder::class,
             UserSeeder::class,
-            RegionSeeder::class
+            RegionSeeder::class,
+            PermissionSeeder::class
         ]);
     }
 }

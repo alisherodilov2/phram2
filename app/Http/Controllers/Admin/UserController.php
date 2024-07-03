@@ -5,19 +5,21 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:users_index')->only('index');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        if(auth()->user()->name != 'admin'){
-            return redirect('/admin/projects');
-        }
         $users = User::all();
-        return view("admin.users.index", compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -25,7 +27,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view("admin.users.create");
+        $roles = Role::all();
+        return view('admin.users.create' , compact('roles'));
     }
 
     /**
@@ -34,15 +37,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'password'=>'required'
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'roles' => 'required',
         ]);
-        User::create([
-            'name'=>$request->input("name"),
-            'email'=>$request->input('email'),
-            'password'=>bcrypt($request->input("password"))
+        $user = User::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password')),
         ]);
+        $user->syncRoles($request->roles);
         return redirect('admin/users');
     }
 
@@ -60,7 +65,8 @@ class UserController extends Controller
     public function edit(string $id)
     {
         $user = User::find($id);
-        return view('admin.users.edit'  , compact('user'));
+        $roles = Role::all();
+        return view('admin.users.edit', compact('user' , 'roles'));
     }
 
     /**
@@ -69,12 +75,13 @@ class UserController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'password'=>'required'
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ]);
         $user = User::find($id);
         $user->update($request->all());
+        $user->syncRoles($request->roles);
         return redirect()->route('admin.users.index');
     }
 

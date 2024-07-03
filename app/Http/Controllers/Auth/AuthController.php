@@ -26,7 +26,7 @@ class AuthController extends Controller
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 Auth::login($user);
-                return redirect('admin/users');
+                return redirect('admin/partner');
             }
         }
         return back();
