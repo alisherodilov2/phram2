@@ -4,9 +4,8 @@
             <div class="row align-items-center">
                 <div class="col-xxl-2 col-lg-3">
                     <div class="logo">
-                        <a href="/"><img
-                                src="{{asset('logo/logoDark.png')}}"
-                                alt="logo"></a>
+                        <a href="/"><img src="{{ asset('logo/logoDark.png') }}" alt="logo"
+                                style="width: 80%;"></a>
                     </div>
                 </div>
                 <div class="col-xxl-7 col-lg-6">
@@ -15,10 +14,9 @@
                             <ul>
                                 <li><a href="/">{{ __('backend.home') }}</a></li>
                                 <li><a href="{{ route('frontend.products') }}">{{ __('backend.products') }}</a></li>
-                                <li class="has-dropdown"><a href="#">{{strip_tags( __('backend.contact')) }}</a>
+                                <li class="has-dropdown"><a href="#">{{ strip_tags(__('backend.contact')) }}</a>
                                     <ul class="sub-menu">
-                                        <li><a
-                                                href="{{ route('frontend.contact.index') }}">{!! __('backend.contact') !!}</a>
+                                        <li><a href="{{ route('frontend.contact.index') }}">{!! __('backend.contact') !!}</a>
                                         </li>
                                         <li><a href="{{ route('frontend.vacancy') }}">{{ __('backend.vacancy') }}</a>
                                         </li>
@@ -26,7 +24,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('frontend.blogs') }}">{{ __('backend.blogMenu') }}</a></li>
-                                
+
                             </ul>
                         </nav>
                     </div>
@@ -83,9 +81,7 @@
         <div class="row align-items-center">
             <div class="col-4">
                 <div class="tp-mob-logo">
-                    <a href="index.html"><img
-                            src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
-                            alt="logo"></a>
+                    <a href="/"><img src="{{ asset('logo/logoDark.png') }}" alt="logo"></a>
                 </div>
             </div>
             <div class="col-8">
@@ -116,8 +112,7 @@
 <div class="tpsideinfo tp-side-info-area">
     <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
     <div class="tpsideinfo__logo mb-40">
-        <a href="/"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
-                alt="logo"></a>
+        <a href="/"><img src="{{ asset('logo/logoWhite.png') }}" alt="logo"></a>
     </div>
 
     <div class="mobile-menu"></div>
