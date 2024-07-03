@@ -8,10 +8,7 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 class RoleController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('permission:permissions_index')->only('index');
-    }
+    
     /**
      * Display a listing of the resource.
      */
