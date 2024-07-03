@@ -13,6 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
+        if(auth()->user()->name != 'admin'){
+            return redirect('/');
+        }
         $users = User::all();
         return view("admin.users.index", compact('users'));
     }
