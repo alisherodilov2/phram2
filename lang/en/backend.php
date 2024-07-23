@@ -54,7 +54,7 @@ return [
     'suport'=>'24/7 Customer <br> Support',
     'team'=>'We have <br> Expert Team',
     // foot
-    'footertext'=>"Fully meets international standards. A company engaged in the production of medicines and natural products made from medicinal plants growing in the mountains and valleys of Uzbekistan and Russia.",
+    'footertext'=>"The leader company in the pharmaceutical industry of Uzbekistan! A company that meets German standards and produces biologically active ingredients in Uzbekistan with German raw materials",
     'name'=>'Name',
     'about'=>'About us',
     'history'=>'Our history',

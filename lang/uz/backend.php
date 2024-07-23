@@ -51,7 +51,7 @@ return [
     'fast' => 'Tez ishlash',
     'suport' => '24/7 Opertorlik xizmati',
     'team' => 'Yuqori malakali mutaxasislar',
-    'footertext' => "Xalqaro standartlarga to‘liq javob beradigan. Oʻzbekiston va Rossiyaning togʻ va vodiylarida oʻsadigan dorivor oʻsimliklardan tayorlanadigan dori va tabiy mahsulotlar ishlab chiqarish bilan shug'ulanuvchi kompaniya",
+    'footertext' => "O’zbekiston farmasevtika sanoatida yetakchi bo’lgan! Germaniya standartlariga javob beruvchi va Germaniya xomashyolari asosida O’bekistonda biologik faol qo’shinchalarni ishlab chiqaruvchi kompaniya",
     'name' => 'Ism',
     'about' => 'Biz haqimizda',
     'history' => 'Bizning tarix',
