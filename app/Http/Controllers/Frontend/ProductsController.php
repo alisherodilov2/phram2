@@ -8,12 +8,16 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $products = Products::all();
-        return  view('frontend.products.index'  , compact("products"));
+        return  view('frontend.products.index', compact("products"));
     }
-    public function show($id){
+    public function show($id)
+    {
+
         $product = Products::find($id);
-        return view('frontend.products.show' , compact('product'));
+        return $product;
+        return view('frontend.products.show', compact('product'));
     }
 }
