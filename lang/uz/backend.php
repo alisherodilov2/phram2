@@ -69,5 +69,12 @@ return [
     //  admin
     'users' => 'Foydalanuvchilar',
     'fill' => 'Filiyallar',
-    'ser'=>'Sertifikatlar'
+    'ser'=>'Sertifikatlar',
+    // card
+    "add_to_card"=>"Savatga o'tish",
+    "image"=>"Rasm",
+    "name"=>"Nomi",
+    "soni"=>"Soni",
+    "remove"=>"O'chirish",
+    "add_order"=>"Buyurtma berish",
 ];

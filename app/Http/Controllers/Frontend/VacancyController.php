@@ -13,7 +13,7 @@ class VacancyController extends Controller
         return view('frontend.vacancy.index' , compact('datas'));
     }
     public function show($id){
-        $vacancy = Vacancy::find($id);
+        $vacancy = Vacancy::findOrFail($id);
         return view('frontend.vacancy.show' , compact('vacancy'));
     }
 }

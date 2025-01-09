@@ -38,6 +38,8 @@ Route::group(['middleware' => 'language'], function () {
     Route::post('contact/create', [App\Http\Controllers\Frontend\ContactController::class, 'create'])->name('frontend.contact.create');
     //about
     Route::get('about', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('frontend.about');
+    //  Order
+    Route::get('cart' , [App\Http\Controllers\Frontend\OrderController::class, 'index'])->name('frontend.cart');
 
 });
 Route::get("/login", [App\Http\Controllers\Auth\AuthController::class, 'login'])->name("login");

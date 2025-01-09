@@ -72,6 +72,12 @@ return [
     //admin
     'users'=>'Users',
     'fill'=>'phyllias',
-    'ser'=>'Certificate'
-    
+    'ser'=>'Certificate',
+    // card add
+    "add_to_card"=>"See cart",
+    "image"=>"Image",
+    "name"=>"Name",
+    "soni"=>"Quantity",
+    "remove"=>"Remove",
+    "add_order"=>"Order",
 ];

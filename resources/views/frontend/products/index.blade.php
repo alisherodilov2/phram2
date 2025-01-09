@@ -47,82 +47,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    @foreach ($products as $item)
-                        @if (app()->getLocale() == 'uz')
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="services-thumb-box mb-30 wow fadeInLeft" data-wow-delay=".3s">
-                                    <div class="services-thumb-box__thumb fix fix">
-                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;" alt="services-thumb">
-                                    </div>
-                                    <div class="services-thumb-box__text-area d-flex align-items-center">
-                                        <div class="services-thumb-box__content">
-                                            <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title }}</a>
-                                            </h5>
-
-                                            <br> <br>
-                                            <div class="d-flex">
-                                                <a href="{{ route('frontend.products.show', $item->id) }}"
-                                                    class="research-item__btn">{{ __('backend.explore') }}</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                        @if (app()->getLocale() == 'ru')
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="services-thumb-box mb-30 wow fadeInLeft" data-wow-delay=".3s">
-                                    <div class="services-thumb-box__thumb fix fix">
-                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;"
-                                            alt="services-thumb">
-                                    </div>
-                                    <div class="services-thumb-box__text-area d-flex align-items-center">
-                                        <div class="services-thumb-box__content">
-                                            <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_ru }}</a>
-                                            </h5>
-
-
-                                            <br> <br>
-                                            <div class="d-flex">
-                                                <a href="{{ route('frontend.products.show', $item->id) }}"
-                                                    class="research-item__btn">{{ __('backend.explore') }}</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                        @if (app()->getLocale() == 'en')
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="services-thumb-box mb-30 wow fadeInLeft" data-wow-delay=".3s">
-                                    <div class="services-thumb-box__thumb fix fix">
-                                        <img src="{{ $item->getFirstMediaUrl() }}" style="width:100%;"
-                                            alt="services-thumb">
-                                    </div>
-                                    <div class="services-thumb-box__text-area d-flex align-items-center">
-                                        <div class="services-thumb-box__content">
-                                            <h5 class="services-thumb-box__title"><a
-                                                    href="{{ route('frontend.products.show', $item->id) }}">{{ $item->title_en }}</a>
-                                            </h5>
-
-                                            <br> <br>
-                                            <div class="d-flex">
-                                                <a href="{{ route('frontend.products.show', $item->id) }}"
-                                                    class="research-item__btn">{{ __('backend.explore') }}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
+                <livewire:products-livewire />
+               
             </div>
         </section>
     </main>
+    @push('scripts')
+       <script>
+         
+       </script>
+    @endpush
 @endsection

@@ -17,5 +17,8 @@ class Resume extends Model implements HasMedia
         'number',
         'vacancy_id',
     ];
+    public function vacancy(){
+        return $this->belongsTo(Vacancy::class , 'vacancy_id');
+    }
 
 }

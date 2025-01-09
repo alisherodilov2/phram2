@@ -5,14 +5,15 @@
 @section('content')
     <main>
         <!-- breadcrumb-area -->
-        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" style="background-attachment: fixed;"
+        <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
+            style="background-attachment: fixed;background-size:cover;"
             data-background="{{ $vacancy->getFirstMediaUrl() ?? '' }}">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-12">
                         <div class="tp-breadcrumb">
                             <h2 class="tp-breadcrumb__title">
-                                {{ $vacancy->title }}
+                                {{ $vacancy->{lang('title')} }}
                             </h2>
                         </div>
                     </div>
@@ -42,10 +43,11 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="postbox__content-area mb-40">
-                                                <h4 class="mb-25"><a href="blog-details.html">{{ $vacancy->title }}</a>
+                                                <h4 class="mb-25"><a
+                                                        href="blog-details.html">{{ $vacancy->{lang('title')} }}</a>
                                                 </h4>
                                                 <p>
-                                                    {!! $vacancy->description !!}
+                                                    {!! $vacancy->{'description'} !!}
                                                 </p>
                                             </div>
                                         </div>
@@ -57,7 +59,7 @@
                                 <div class="col-lg-12 col-md-7 col-12">
                                     <div class="contactform wow fadeInRight">
                                         <div class="contactform__list mb-60">
-                                            <form action="{{ route('resume.store', $vacancy->id) }}" method="post">
+                                            <form action="{{ route('resume.store', $vacancy->id) }}" method="post" enctype='multipart/form-data'>
                                                 @csrf
                                                 <div class="row">
                                                     <div class="col-lg-12">
@@ -87,7 +89,15 @@
                                                                 placeholder="Enter your number" name="number">
                                                         </div>
                                                     </div>
-
+                                                    <div class="col-lg-6">
+                                                        <div class="contactform__input mb-30">
+                                                            <input type="file" name="resume_file" id="resume_file"
+                                                                class="form-control"
+                                                                style="position: relative; width: 100%; padding: 12px 15px; font-size: 16px; color: #495057; 
+                  background-color: #f8f9fa; border: 1px solid #ced4da; border-radius: 8px; 
+                  transition: all 0.3s ease;">
+                                                        </div>
+                                                    </div>
                                                     <div class="col-lg-12">
                                                         <div class="contactform__input mb-30">
                                                             <textarea name="description" name="description" placeholder="Type your comment"></textarea>

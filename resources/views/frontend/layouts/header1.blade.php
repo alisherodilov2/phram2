@@ -62,9 +62,14 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
+                        
                         <div class="header-cart-order d-flex align-items-center justify-content-end">
                             <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                                 <!-- Example single danger button -->
+                                <div class="tp-card-icon-area " style="margin-right:20px;">
+                                    <livewire:header-bag />
+                                   
+                                </div>
                                 <div class="tp-cart-icon-area">
 
                                     <div class="btn-group">
@@ -95,7 +100,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -113,7 +117,7 @@
             <div class="col-md-4 col-10">
                 <div class="tp-mob-logo">
                     <a href="/"><img
-                            src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+                            src="{{asset('logo/logoDark.png')}}"
                             alt="logo"></a>
                 </div>
             </div>
@@ -148,7 +152,7 @@
 <div class="tpsideinfo tp-side-info-area">
     <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
     <div class="tpsideinfo__logo mb-40">
-        <a href="index.html"><img src="https://planbabyclinic.com/storage/partners/May2023/P200msUY9Q2h3CI0XmNl.png"
+        <a href="index.html"><img src="{{asset('logo/logoWhite.png')}}"
                 alt="logo"></a>
     </div>
 
@@ -165,7 +169,7 @@
             </form>
         </div>
     </div>
-    <div class="tpsideinfo__gallery mb-35 d-none d-xl-block">
+    {{-- <div class="tpsideinfo__gallery mb-35 d-none d-xl-block">
         <span>Cheack Instagram Post</span>
         <div class="tpsideinfo__gallery-item">
             <a href="assets/img/blog/blog-in-01.jpg" class="popup-image"><img src="assets/img/blog/blog-in-01.jpg"
@@ -175,7 +179,7 @@
             <a href="assets/img/blog/blog-in-03.jpg" class="popup-image"><img src="assets/img/blog/blog-in-03.jpg"
                     alt=""></a>
         </div>
-    </div>
+    </div> --}}
     <div class="tpsideinfo__socialicon">
         <a href="#"><i class="fa-brands fa-youtube"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>

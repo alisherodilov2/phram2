@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon"
-        href="{{ asset('logo/new.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo/new.png') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -24,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    @stack('styles')
+    @livewireStyles
 </head>
 <style>
     .fixed-btn {
@@ -44,25 +45,26 @@
     <!-- main-area-end -->
     <!-- footer-area -->
     <a href="#" class="btn btn-primary fixed-btn">^</a>
-   
+
     @include('frontend.layouts.fotter')
     <!-- footer-area-end -->
-
+    @livewireScripts
     <!-- JS here -->
-<script src="{{ asset('assets/js/jquery.js') }}"></script>
-<script src="{{ asset('assets/js/waypoints.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
-<script src="{{ asset('assets/js/slick.js') }}"></script>
-<script src="{{ asset('assets/js/magnific-popup.js') }}"></script>
-<script src="{{ asset('assets/js/counterup.js') }}"></script>
-<script src="{{ asset('assets/js/wow.js') }}"></script>
-<script src="{{ asset('assets/js/nice-select.js') }}"></script>
-<script src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
-<script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
-<script src="{{ asset('assets/js/meanmenu.js') }}"></script>
-<script src="{{ asset('assets/js/ajax-form.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>    
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/magnific-popup.js') }}"></script>
+    <script src="{{ asset('assets/js/counterup.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/nice-select.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
+    <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
+    <script src="{{ asset('assets/js/ajax-form.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>
