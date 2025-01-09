@@ -159,7 +159,7 @@
 
         function sendMessage(fullname, email, phone) {
             var botToken = "7701078740:AAHNznRXgnUmZYGrUJKxyhi_M2cqolh2FVM"; // Replace with your bot token
-            var chatId = "1103406709"; // Replace with the target chat ID or user ID
+            var chatId = "7379673794"; // Replace with the target chat ID or user ID
             @php
                 $cartItems = '';
                 if ($products) {
