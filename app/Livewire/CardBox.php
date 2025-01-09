@@ -60,7 +60,7 @@ class CardBox extends Component
     {
         $products = Session::get('cart');
         $quantity = 0;
-        if ($products || count($products) > 0) {
+        if ($products) {
             foreach ($products as $value) {
                 $quantity += $value['quantity'];
             }
