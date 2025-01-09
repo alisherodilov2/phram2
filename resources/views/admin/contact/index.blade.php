@@ -49,7 +49,7 @@
                                         <td>
                                             <div class="d-flex">
                                              
-                                                <button class="btn btn-info">Edit</button>
+                                                <a href="{{route('admin.contact.edit' , $data->id)}}" class="btn btn-info">Edit</a>
                                             </div>
                                         </td>
                                     </tr>

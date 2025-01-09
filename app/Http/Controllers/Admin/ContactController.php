@@ -13,8 +13,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-       $contacts = Contact::all();
-       return view("admin.contact.index" , compact('contacts'));
+        $contacts = Contact::all();
+        return view('admin.contact.index', compact('contacts'));
     }
 
     /**
@@ -30,11 +30,11 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->request->add(['status'=>0]);
+        $request->request->add(['status' => 0]);
         $request->validate([
-            'name'=>'required',
-            'number'=>'required',
-            'description'=>'required'
+            'name' => 'required',
+            'number' => 'required',
+            'description' => 'required',
         ]);
         Contact::create($request->all());
         return back();
@@ -53,7 +53,8 @@ class ContactController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $contact = Contact::find($id);
+        return view('admin.contact.edit', compact('contact'));
     }
 
     /**
@@ -61,7 +62,20 @@ class ContactController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'number' => 'required',
+            'status' => 'required',
+        ]);
+        $contact = Contact::find($id);
+        $contact->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'number' => $request->number,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('admin.contact.index');
     }
 
     /**
