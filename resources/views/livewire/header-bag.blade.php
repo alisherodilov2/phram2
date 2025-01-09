@@ -9,7 +9,7 @@
     <!-- Dropdown menu -->
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bagDropdown" style="width: 300px;">
         <!-- Check if there are items in the cart -->
-        @if ($itemCount > 0 ||$products)
+        @if ($itemCount > 0 && $products)
                 @foreach ($products as $item)
                     <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
                         <div class="d-flex align-items-center">
