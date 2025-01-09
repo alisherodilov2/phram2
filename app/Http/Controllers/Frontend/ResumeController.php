@@ -79,9 +79,7 @@ class ResumeController extends Controller
         $responseData = json_decode($response, true);
 
         if (isset($responseData['ok']) && $responseData['ok']) {
-            echo 'Message sent successfully.';
-        } else {
-            echo 'Error sending message.';
-        }
+            
+        } 
     }
 }
