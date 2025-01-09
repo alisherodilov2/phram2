@@ -77,13 +77,11 @@ class ResumeController extends Controller
 
         // Handle response (optional)
         $responseData = json_decode($response, true);
-        dd($responseData);
-        return $responseData;
 
         if (isset($responseData['ok']) && $responseData['ok']) {
-            return 'Message sent successfully.';
+            echo 'Message sent successfully.';
         } else {
-            return 'Error sending message.';
+            echo 'Error sending message.';
         }
     }
 }
