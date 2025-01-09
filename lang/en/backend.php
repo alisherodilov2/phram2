@@ -80,4 +80,5 @@ return [
     "soni"=>"Quantity",
     "remove"=>"Remove",
     "add_order"=>"Order",
+    "buy"=>"Order"
 ];

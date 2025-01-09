@@ -141,7 +141,7 @@
             </div>
         </div>
     </div>
-    <script>
+    {{-- <script>
         function checkOut() {
             const fullnameInput = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
@@ -219,5 +219,5 @@
 
             input.value = value; // Update the input value with the formatted value
         }
-    </script>
+    </script> --}}
 </section>

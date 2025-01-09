@@ -14,11 +14,15 @@
                         </h5>
                         <br> <br>
                         <div class="d-flex justify-content-between">
+                            <div class="contactform__input mb-30-btn">
+                                <button type="submit" class="tp-btn">Xabar qoldirish</button>
+                            </div>
                             <a href="{{ route('frontend.products.show', $item->id) }}"
                                 class="research-item__btn">{{ __('backend.explore') }}</a>
-                            <button type="button" wire:click="addToCart({{ $item->id }})" class="btn border rounded-circle position-relative">
+                            <a href="{{ $item->link }}" class="research-item__btn">{{ __('backend.add_order') }}</a>
+                            {{-- <button type="button" wire:click="addToCart({{ $item->id }})" class="btn border rounded-circle position-relative">
                                 <i class="fa-solid fa-plus"></i>
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                 </div>

@@ -67,7 +67,7 @@
                             <div class="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                                 <!-- Example single danger button -->
                                 <div class="tp-card-icon-area " style="margin-right:20px;">
-                                    <livewire:header-bag />
+                                    {{-- <livewire:header-bag /> --}}
                                    
                                 </div>
                                 <div class="tp-cart-icon-area">

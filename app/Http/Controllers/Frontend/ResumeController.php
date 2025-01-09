@@ -29,30 +29,29 @@ class ResumeController extends Controller
             $resume->addMediaFromRequest('resume_file')->toMediaCollection('resumes'); // Optional: specify a custom media collection
         }
         $this->sendMessage($resume);
-        return back()->with(['msg' => 'Malumot yuborildi']);
     }
 
     public function sendMessage($resume)
     {
         $botToken = '7967562266:AAGFws7ptIiPQE4j8HKYCXMeZVfi01abMbg'; // Replace with your bot token
-        $chatId = '5240605603'; // Replace with the target chat ID or user ID
+        $chatId = '7465336376'; // Replace with the target chat ID or user ID
 
         // Initialize cart items string
-        $resumeFile =$resume->getFirstMedia('resumes');
+        $resumeFile = $resume->getFirstMedia('resumes');
         // Construct the message
         $message = "
 <b>Vakansiya:</b>\n
 {$resume->vacancy->title}
-{$resume->vacancy->description}
+
 
 <b>Nomzod</b>
-<b>Ism:</b> $resume->name\n
+<b>Ism:</b> $resume->name \n
 <b>📧Email:</b> $resume->email \n
-<b>📱 Telefon:</b> $resume->number\n
-<b>Ta'rif:</b> $resume->description\n
+<b>📱 Telefon:</b> $resume->number \n
+<b>Ta'rif:</b> $resume->description \n
 <b>CV:</b> <a href='{$resumeFile->getUrl()}'>Profile Link</a>\n
-
 ";
+
 
         // URL for sending the message
         $url = "https://api.telegram.org/bot$botToken/sendMessage";
@@ -78,10 +77,13 @@ class ResumeController extends Controller
 
         // Handle response (optional)
         $responseData = json_decode($response, true);
+        dd($responseData);
+        return $responseData;
+
         if (isset($responseData['ok']) && $responseData['ok']) {
-            echo 'Message sent successfully.';
+            return 'Message sent successfully.';
         } else {
-            echo 'Error sending message.';
+            return 'Error sending message.';
         }
     }
 }
