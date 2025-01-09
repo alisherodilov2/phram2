@@ -89,8 +89,10 @@ class CardBox extends Component
                     'products_id' => $value['id'],
                 ]);
             }
+            $cart = Session::get('cart');
             Session::forget('cart');
-            $this->showStatic();
+            $this->products = [];
+            $this->dispatch('update-cart', count: count($cart));
         }
     }
 
