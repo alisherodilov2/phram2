@@ -29,7 +29,7 @@ class ResumeController extends Controller
             $resume->addMediaFromRequest('resume_file')->toMediaCollection('resumes'); // Optional: specify a custom media collection
         }
         $this->sendMessage($resume);
-        return back()->with('success' , "Ma'lumotlar yuborildi")
+        return back()->with('success' , "Ma'lumotlar yuborildi");
     }
 
     public function sendMessage($resume)
