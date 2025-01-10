@@ -38,7 +38,7 @@
                                 </a>
                             </h4>
                             <p>
-                                {!! substr($data->{lang('description')}, 0, 200) !!}...
+                                {!! substr($data->{lang('description')}, 0, 100) !!}...
                             </p> <br>
                             <a href="{{ route('frontend.vacancy.show', $data->id) }}"
                                 class="btn btn-primary">{{ __('backend.explore') }}</a>
