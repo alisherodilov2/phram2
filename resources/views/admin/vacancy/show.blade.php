@@ -8,7 +8,7 @@
                         <div class="d-flex">
                             <div class="flex-group">
                                 <h3>
-                                    {{ $vacancy->title }} / {{ $vacancy->title_ru }} / {{ $vacancy->title_en }}
+                                    {{ $vacancy->title  ?? ""}} / {{ $vacancy->title_ru }} / {{ $vacancy->title_en }}
                                 </h3>
                                 <p>
                                     {!! $vacancy->description !!}
