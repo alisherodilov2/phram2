@@ -47,7 +47,7 @@
                                                         href="blog-details.html">{{ $vacancy->{lang('title')} }}</a>
                                                 </h4>
                                                 <p>
-                                                    {!! $vacancy->{'description'} !!}
+                                                    {!! $vacancy->{lang('description')} !!}
                                                 </p>
                                             </div>
                                         </div>
