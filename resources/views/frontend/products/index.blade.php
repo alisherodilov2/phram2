@@ -3,7 +3,22 @@
     @include('frontend.layouts.header1')
 @endsection
 @section('content')
+    <style>
+        .services-thumb-box__thumb {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .services-thumb-box__thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
     <main>
         <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
             style="background-size: cover;background-repeat:no-repeat;background-attachment: fixed;background-image:url('{{ asset('img/product.jpg') }}')"
